@@ -65,6 +65,7 @@ cask 'the-unarchiver'
 cask 'tunnelbear'
 cask 'visual-studio-code'
 cask 'whatsapp'
+cask 'telegram'
 cask 'zoom'
 
 # Quicklook
