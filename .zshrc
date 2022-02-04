@@ -1,5 +1,7 @@
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
+# Path to you Sites
+export SITES=$HOME/Sites
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
