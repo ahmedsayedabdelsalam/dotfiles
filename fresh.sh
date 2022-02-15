@@ -57,3 +57,7 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
+
+# Removes karabiner.json from $HOME/.config/karabiner (if it exists) and symlinks the karabiner.json file from the .dotfiles
+rm -rf $HOME/.config/karabiner/karabiner.json
+ln -s $HOME/.dotfiles/karabiner.json $HOME/.config/karabiner/karabiner.json
