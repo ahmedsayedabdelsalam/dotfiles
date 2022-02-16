@@ -1,0 +1,3 @@
+imap jj <Esc>
+vmap > >gv
+vmap < <gv
