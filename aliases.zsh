@@ -12,6 +12,7 @@ alias sites="cd $HOME/Sites"
 # Laravel
 alias a="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
+alias t="php artisan tinker"
 alias seed="php artisan db:seed"
 
 # PHP
