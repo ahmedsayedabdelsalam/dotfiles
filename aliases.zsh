@@ -20,3 +20,5 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # Git
 
+# Magento
+alias m="bin/magento"
