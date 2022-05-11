@@ -40,8 +40,11 @@ brew 'nvm'
 brew 'redis'
 brew 'yarn'
 brew 'rbenv'
+brew 'watchman'
 
 # Apps
+cask 'adoptopenjdk/openjdk/adoptopenjdk8'
+cask 'android-studio'
 cask 'browserosaurus'
 cask 'caffeine'
 cask 'dbngin'
@@ -91,3 +94,4 @@ mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'SHAREit', id: 1040029915
+mas 'Xcode', id: 497799835
