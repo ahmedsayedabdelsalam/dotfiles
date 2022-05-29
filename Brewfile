@@ -43,7 +43,6 @@ brew 'rbenv'
 brew 'watchman'
 
 # Apps
-cask 'adoptopenjdk/openjdk/adoptopenjdk8'
 cask 'android-studio'
 cask 'browserosaurus'
 cask 'caffeine'
@@ -76,6 +75,7 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zoom'
+cask 'zulu11' # JDK
 
 # Quicklook
 cask 'quicklook-json'
