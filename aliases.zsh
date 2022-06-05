@@ -22,6 +22,7 @@ alias sail="[ -f sail ] && bash sail || bash vendor/bin/sail"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # Git
+alias gbc="$DOTFILES/git-clean.sh"
 
 # Magento
 alias m="bin/magento"
