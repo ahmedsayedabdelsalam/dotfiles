@@ -13,7 +13,7 @@ set incsearch                                       " go to matched search while
 set number                                          " print the line number in front of each line
 
 """ Mappings --------------------------------
-imap jj <Esc>                                       " jj to go to normal mode
+imap jj <Esc>                                       
 vmap > >gv                                          " to make indent selection not being removed after single indent
 vmap < <gv                                          " to make unindent selection not being removed after single indent
 
@@ -32,3 +32,5 @@ map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
+
+map <leader>r <Action>(Refactorings.QuickListPopupAction)
