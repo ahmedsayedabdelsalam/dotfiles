@@ -34,3 +34,4 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
 map <leader>r <Action>(Refactorings.QuickListPopupAction)
+map <leader>v <Action>(EditorSelectWord)
