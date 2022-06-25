@@ -41,6 +41,7 @@ brew 'redis'
 brew 'yarn'
 brew 'rbenv'
 brew 'watchman'
+brew 'gitmoji'
 
 # Apps
 cask 'android-studio'
