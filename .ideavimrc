@@ -1,5 +1,5 @@
 """ Map leader to space ---------------------
-let mapleader=" "
+let mapleader=";"
 
 """ Plugins ---------------------------------
 set commentary                                      " gcc to comment code
@@ -13,9 +13,10 @@ set incsearch                                       " go to matched search while
 set number                                          " print the line number in front of each line
 
 """ Mappings --------------------------------
-imap jj <Esc>                                       
-vmap > >gv                                          " to make indent selection not being removed after single indent
-vmap < <gv                                          " to make unindent selection not being removed after single indent
+imap jj <Esc>
+" keep indenting
+vmap > >gv
+vmap < <gv
 
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)
@@ -35,3 +36,5 @@ map <leader>o <Action>(FileStructurePopup)
 
 map <leader>r <Action>(Refactorings.QuickListPopupAction)
 map <leader>v <Action>(EditorSelectWord)
+
+map <leader>w <Action>(HideAllWindows)
