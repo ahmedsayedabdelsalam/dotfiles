@@ -38,3 +38,5 @@ map <leader>r <Action>(Refactorings.QuickListPopupAction)
 map <leader>v <Action>(EditorSelectWord)
 
 map <leader>w <Action>(HideAllWindows)
+map <leader>v <Action>(EditorSelectWord)
+map <leader>V <Action>(EditorUnSelectWord)
