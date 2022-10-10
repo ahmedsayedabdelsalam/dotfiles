@@ -39,6 +39,7 @@ brew 'nvm'
 brew 'redis'
 brew 'yarn'
 brew 'rbenv'
+brew 'ruby-build'
 brew 'watchman'
 brew 'gitmoji'
 

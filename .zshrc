@@ -119,8 +119,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # RBENV
-eval "$(rbenv init -)"
-PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
 
 # NVM
 . "$DOTFILES/nvm.sh"
