@@ -16,7 +16,16 @@ alias t="php artisan tinker"
 alias seed="php artisan db:seed"
 
 # Laravel Sail
-alias sail="[ -f sail ] && bash sail || bash vendor/bin/sail"
+function sail() {
+    if [ -f sail ]; then
+        sh sail "$@"
+    elif [ -f bin/sail ]; then
+        sh bin/sail "$@"
+    else
+        sh vendor/bin/sail $@
+    fi
+}
+alias sail=sail
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
