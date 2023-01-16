@@ -4,6 +4,7 @@ alias reloadshell="source $HOME/.zshrc"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
+alias m1="arch -x86_64"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
