@@ -33,6 +33,7 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # Git
 alias gbc="$DOTFILES/git-clean.sh"
+alias gcz="git cz"
 
 # Magento
 alias m="bin/magento"
