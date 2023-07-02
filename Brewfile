@@ -1,4 +1,5 @@
 # Taps
+tap 'axllent/apps'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
@@ -33,6 +34,7 @@ brew 'php@8.0'
 brew 'php@7.4'
 brew 'composer'
 brew 'imagemagick'
+brew 'mailpit'
 brew 'mysql'
 brew 'nginx'
 brew 'nvm'
