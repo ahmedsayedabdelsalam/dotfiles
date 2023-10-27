@@ -66,3 +66,7 @@ ln -s karabiner.json $HOME/.config/karabiner/karabiner.json
 # Removes .ideavimrc from $HOME/.ideavimrc (if it exists) and symlinks the .ideavimrc file from the .dotfiles
 rm -rf $HOME/.ideavimrc
 ln -s .ideavimrc $HOME/.ideavimrc
+
+# Set iterm config files.
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILES/config/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
