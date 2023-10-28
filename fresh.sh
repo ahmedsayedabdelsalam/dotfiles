@@ -68,5 +68,31 @@ rm -rf $HOME/.ideavimrc
 ln -s .ideavimrc $HOME/.ideavimrc
 
 # Set iterm config files.
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILES/config/iterm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$DOTFILES/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# Neovim
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# Kitty
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config/kitty
+
+# Tmux
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
+# Git
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
+
+# Phpactor
+rm -rf $HOME/.config/phpactor
+ln -s $DOTFILES/phpactor $HOME/.config/phpactor
+
+# Scripts
+ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+
+# NVM (Node Version Manager)
+mkdir -p $HOME/.nvm
+ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
