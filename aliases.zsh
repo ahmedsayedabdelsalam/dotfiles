@@ -5,6 +5,8 @@ alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-d
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 alias m1="arch -x86_64"
+alias vim=nvim
+alias vi=nvim
 
 # Directories
 alias dotfiles="cd $DOTFILES"

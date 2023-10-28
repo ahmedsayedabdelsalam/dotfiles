@@ -17,9 +17,12 @@ brew 'grep'
 brew 'httpie'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
+brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'rg'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'
+brew 'tmux'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -54,12 +57,12 @@ cask 'figma'
 cask 'firefox'
 cask 'flipper'
 cask 'flycut'
-cask 'font-fira-code'
 cask 'google-chrome'
 cask 'hyper'
 cask 'imageoptim'
 cask 'jetbrains-toolbox'
 cask 'karabiner-elements'
+cask 'kitty'
 cask 'microsoft-teams'
 cask 'mouse-fix'
 cask 'ngrok'
@@ -85,6 +88,8 @@ cask 'zulu11' # JDK
 cask 'quicklook-json'
 
 # Fonts
+cask 'font-fira-code'
+cask 'font-jetbrains-mono-nerd-font'
 cask 'font-lato'
 cask 'font-open-sans'
 cask 'font-roboto'
