@@ -35,6 +35,10 @@ M.mason = {
 
     -- php stuff
     "intelephense",
+
+    -- ruby stuff
+    "solargraph",
+    "rubocop",
   },
 }
 
