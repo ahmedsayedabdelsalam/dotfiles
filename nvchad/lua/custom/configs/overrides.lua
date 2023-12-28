@@ -32,6 +32,7 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "prettier",
+    "tailwindcss-language-server",
 
     -- php stuff
     "intelephense",

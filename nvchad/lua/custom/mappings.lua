@@ -12,4 +12,20 @@ M.general = {
 
 -- more keybinds!
 
+M.nvterm = {
+  t = {
+     ["<leader>tt"] = {
+      function () require("nvterm.terminal").toggle('horizontal') end,
+       "Toggle horizontal term",
+     },
+   },
+
+  n = {
+     ["<leader>tt"] = {
+      function () require("nvterm.terminal").toggle('horizontal') end,
+       "Toggle horizontal term",
+     },
+   },
+ }
+
 return M
