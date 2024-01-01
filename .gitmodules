@@ -4,3 +4,6 @@
 [submodule "plugins/artisan"]
 	path = plugins/artisan
 	url = git@github.com:jessarcher/zsh-artisan.git
+[submodule "iterm2"]
+	path = iterm2
+	url = git@github.com:ahmedsayedabdelsalam/iterm2.git
