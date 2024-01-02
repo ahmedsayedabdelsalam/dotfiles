@@ -47,6 +47,46 @@ local plugins = {
     end,
   },
 
+  {
+    "ggandor/lightspeed.nvim",
+    event = 'VeryLazy',
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({})
+    end
+  },
+
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+        config = {
+          header = {
+            '',
+            '',
+            '',
+            '     _____  .__                       .___   _________                       .___',
+            '    /  _  \\ |  |__   _____   ____   __| _/  /   _____/____  ___.__. ____   __| _/',
+            '   /  /_\\  \\|  |  \\ /     \\_/ __ \\ / __ |   \\_____  \\\\__  \\<   |  |/ __ \\ / __ | ',
+            '  /    |    \\   Y  \\  Y Y  \\  ___// /_/ |   /        \\/ __ \\\\___  \\  ___// /_/ | ',
+            '  \\____|__  /___|  /__|_|  /\\___  >____ |  /_______  (____  / ____|\\___  >____ | ',
+            '          \\/     \\/      \\/     \\/     \\/          \\/     \\/\\/         \\/     \\/ ',
+            '',
+            '',
+          },
+        },
+      }
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  }
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

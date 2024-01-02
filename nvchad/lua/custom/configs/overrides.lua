@@ -1,17 +1,21 @@
 local M = {}
 
+-- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
 M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
     "html",
+    "yaml",
     "css",
     "javascript",
     "typescript",
     "tsx",
-    "c",
+    "vue",
     "markdown",
     "markdown_inline",
+    "php",
+    "ruby",
   },
   indent = {
     enable = true,
@@ -32,14 +36,15 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "prettier",
+    "emmet-ls",
     "tailwindcss-language-server",
+    "vue-language-server",
 
     -- php stuff
-    "intelephense",
+    "phpactor",
 
     -- ruby stuff
     "solargraph",
-    "rubocop",
   },
 }
 
