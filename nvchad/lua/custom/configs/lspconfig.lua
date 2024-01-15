@@ -15,3 +15,7 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
+
+vim.diagnostic.config {
+  virtual_text = false,
+}

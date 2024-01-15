@@ -48,6 +48,15 @@ local plugins = {
   },
 
   {
+    "stevearc/conform.nvim",
+    --  for users those who want auto-save conform + lazyloading!
+    -- event = "BufWritePre"
+    config = function()
+      require "custom.configs.conform"
+    end,
+  },
+
+  {
     "ggandor/lightspeed.nvim",
     event = 'VeryLazy',
   },
@@ -61,31 +70,25 @@ local plugins = {
     end
   },
 
+  -- Jump to the last location when opening a file.
   {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        -- config
-        config = {
-          header = {
-            '',
-            '',
-            '',
-            '     _____  .__                       .___   _________                       .___',
-            '    /  _  \\ |  |__   _____   ____   __| _/  /   _____/____  ___.__. ____   __| _/',
-            '   /  /_\\  \\|  |  \\ /     \\_/ __ \\ / __ |   \\_____  \\\\__  \\<   |  |/ __ \\ / __ | ',
-            '  /    |    \\   Y  \\  Y Y  \\  ___// /_/ |   /        \\/ __ \\\\___  \\  ___// /_/ | ',
-            '  \\____|__  /___|  /__|_|  /\\___  >____ |  /_______  (____  / ____|\\___  >____ | ',
-            '          \\/     \\/      \\/     \\/     \\/          \\/     \\/\\/         \\/     \\/ ',
-            '',
-            '',
-          },
-        },
-      }
-    end,
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
-  }
+    'farmergreg/vim-lastplace',
+    event = "VeryLazy",
+  },
+
+  -- Automatically fix indentation when pasting code. 
+  {
+    'sickill/vim-pasta',
+    event = "VeryLazy",
+  },
+
+  -- Rails
+  {
+    "tpope/vim-rails",
+    event = 'VeryLazy',
+  },
+
+
 
   -- To make a plugin not be loaded
   -- {
@@ -96,10 +99,15 @@ local plugins = {
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
   -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
-  -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
+  {
+    "mg979/vim-visual-multi",
+    lazy = false,
+    init = function()
+		vim.g.VM_maps = { 
+      ["Find Under"] = "<C-d>"
+    }
+	  end,
+  }
 }
 
 return plugins
