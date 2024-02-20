@@ -43,6 +43,7 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'watchman'
 brew 'gitmoji'
+brew 'pyenv'
 
 # Apps
 cask 'android-studio'

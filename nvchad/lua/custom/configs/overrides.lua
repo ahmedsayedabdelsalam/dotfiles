@@ -16,6 +16,7 @@ M.treesitter = {
     "markdown_inline",
     "php",
     "ruby",
+    "blade",
   },
   indent = {
     enable = true,

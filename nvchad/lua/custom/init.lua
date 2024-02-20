@@ -13,3 +13,9 @@
 --     end, vim.t.bufs)
 --   end,
 -- })
+
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
+})
