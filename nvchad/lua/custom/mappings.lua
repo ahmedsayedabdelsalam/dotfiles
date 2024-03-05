@@ -36,4 +36,28 @@ M.nvterm = {
    },
  }
 
+M.telescope = {
+  n = {
+    ["<leader>f."] = {
+      function()
+        require("telescope").extensions.live_grep_args.live_grep_args {
+          vimgrep_arguments = {
+            "rg",
+            "--hidden",
+            -- NvChad defaults
+            "-L",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+          },
+        }
+      end,
+      "Live grep, including hidden files",
+    },
+  },
+}
+
 return M

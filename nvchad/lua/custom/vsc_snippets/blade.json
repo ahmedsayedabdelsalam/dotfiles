@@ -1,0 +1,20 @@
+{
+  "tailwind theme color": {
+    "prefix": "thec",
+    "body": [
+      "[var(--theme-color)]"
+    ]
+  },
+  "tailwind theme seondary color": {
+    "prefix": "thesc",
+    "body": [
+      "[var(--theme-secondary-color)]"
+    ]
+  },
+  "tailwind theme text color": {
+    "prefix": "thet",
+    "body": [
+      "text-[var(--theme-text-color)]"
+    ]
+  }
+}

@@ -12,12 +12,12 @@ M.ui = {
   hl_add = highlights.add,
 
   -- The below code for those using nvimtree on the right side and want the offset on right.
-  tabufline = {
-    overriden_modules = function(modules)
-       table.insert(modules, modules[1])
-       table.remove(modules,1)
-    end,
-  },
+  -- tabufline = {
+  --   overriden_modules = function(modules)
+  --      table.insert(modules, modules[1])
+  --      table.remove(modules,1)
+  --   end,
+  -- },
 
   nvdash = {
     load_on_startup = true,

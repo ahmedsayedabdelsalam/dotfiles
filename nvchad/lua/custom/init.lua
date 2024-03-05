@@ -19,3 +19,7 @@ vim.filetype.add({
     ['.*%.blade%.php'] = 'blade',
   },
 })
+
+-- vscode format i.e json files
+vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/vsc_snippets"
+
