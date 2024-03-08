@@ -16,5 +16,17 @@
     "body": [
       "text-[var(--theme-text-color)]"
     ]
+  },
+  "localize text": {
+    "prefix": "__",
+    "body": [
+      "{{ __(\"$1\") }}"
+    ]
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "{{-- @TODO: $1 --}}"
+    ]
   }
 }
