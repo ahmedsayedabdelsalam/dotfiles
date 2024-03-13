@@ -73,7 +73,7 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Neovim
 rm -rf $HOME/.config/nvim
-ln -s $DOTFILES/nvim $HOME/.config/nvim
+ln -s $DOTFILES/nvchad $HOME/.config/nvim
 
 # Kitty
 rm -rf $HOME/.config/kitty

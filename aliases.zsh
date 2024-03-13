@@ -37,6 +37,8 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 # Git
 alias gbc="$DOTFILES/git-clean.sh"
 alias gcz="git cz"
+alias glm="submodule update --remote --merge"
+alias gpm="git push --recurse-submodules=on-demand"
 
 # Magento
 alias m="bin/magento"
