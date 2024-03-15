@@ -13,49 +13,6 @@ return {
     },
   },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        -- defaults 
-        "vim",
-        "lua",
-        "vimdoc",
-
-        -- web dev 
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "vue",
-        "php",
-        "ruby",
-        "blade",
-
-       -- low level
-        "c",
-        "zig"
-      },
-    },
-    config = function(_, opts)
-      -- config override to support blade
-      dofile(vim.g.base46_cache .. "syntax")
-      dofile(vim.g.base46_cache .. "treesitter")
-      require("nvim-treesitter.configs").setup(opts)
-
-      local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-      parser_config.blade = {
-        install_info = {
-          url = "https://github.com/EmranMR/tree-sitter-blade",
-          files = {"src/parser.c"},
-          branch = "main",
-        },
-        filetype = "blade"
-      }
-    end,
-  },
-
   -- add live_grep_args
   {
     "nvim-telescope/telescope.nvim",
@@ -99,14 +56,22 @@ return {
         "prettier",
         "emmet-ls",
         "tailwindcss-language-server",
+        "rustywind",
         "vue-language-server",
+        "blade-formatter",
+        "pint",
 
         -- php stuff
-        "phpactor",
+        "intelephense",
+        "phpstan",
 
         -- ruby stuff
         "solargraph",
       },
     },
-  }
+  },
+
+  {
+    "jwalton512/vim-blade",
+  },
 }

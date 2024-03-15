@@ -27,3 +27,18 @@ lspconfig.emmet_ls.setup {
   capabilities = capabilities,
   filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue", "blade" },
 }
+
+lspconfig.intelephense.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "php", "blade" },
+  settings = {
+    intelephense = {
+      filetypes = { "php", "blade" },
+      files = {
+        associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+        maxSize = 5000000,
+      },
+    },
+  },
+}

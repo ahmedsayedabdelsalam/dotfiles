@@ -33,17 +33,12 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
+require "autocmds"
 
 vim.schedule(function()
   require "mappings"
 end)
 
--- add blade file type
-vim.filetype.add({
-  pattern = {
-    ['.*%.blade%.php'] = 'blade',
-  },
-})
-
+-- add yours
 -- vscode format i.e json files
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/vsc_snippets"
