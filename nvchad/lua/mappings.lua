@@ -5,14 +5,9 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jj", "<ESC>")
 
-map("n", "<leader>fm", function()
-  require("conform").format()
-end, { desc = "File Format with conform" })
-
-map("i", "jj", "<ESC>", { desc = "Escape insert mode" })
-
--- custom
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- keep visual mode when indeinting
 map("v", ">", ">gv", { desc = "indent forward" })
