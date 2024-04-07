@@ -16,6 +16,17 @@ return {
   },
 
   {
+    "lewis6991/gitsigns.nvim",
+    opts = function()
+      return vim.tbl_deep_extend(
+        "force",
+        require("nvchad.configs.gitsigns"),
+        require("configs.gitsigns")
+      )
+    end,
+  },
+
+  {
     "nvim-tree/nvim-tree.lua",
     opts = {
       git = { enable = true },
