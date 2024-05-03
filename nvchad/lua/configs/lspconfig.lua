@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "cssls", "tsserver", "phpactor", "solargraph", "tailwindcss", "dartls" }
+local servers = { "cssls", "tsserver", "phpactor", "solargraph", "tailwindcss", "dartls", "clangd" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -14,13 +14,6 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
 
 -- custom
 lspconfig.html.setup {
@@ -49,3 +42,8 @@ lspconfig.intelephense.setup {
     },
   },
 }
+
+-- disable diagnostic virtual text
+vim.diagnostic.config({
+  virtual_text = false,
+})

@@ -9,6 +9,7 @@ local options = {
     -- html = { "prettier" },
     php = { "pint" },
     blade = { "blade-formatter", "rustywind" },
+    cpp = { "clang-format" },
   },
 
   -- format_on_save = {

@@ -24,6 +24,11 @@ return {
 
       -- ruby stuff
       "solargraph",
+
+      -- c++ stuff
+      "clangd",
+      "clang-format",
+      "codelldb"
     },
   },
 }

@@ -22,6 +22,7 @@ return {
 
      -- low level
       "c",
+      "cpp",
       "zig"
     },
   },
