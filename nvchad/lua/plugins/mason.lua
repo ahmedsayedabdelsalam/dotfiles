@@ -19,6 +19,7 @@ return {
 
       -- php stuff
       "intelephense",
+      "phpactor",
       "phpstan",
       "php-debug-adapter",
 

@@ -1,5 +1,5 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+# Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 # Path to you Sites
@@ -85,7 +85,6 @@ ZSH_CUSTOM=$DOTFILES
 plugins=(
     artisan
     git
-    thefuck
     zsh-autosuggestions
 )
 
@@ -145,5 +144,5 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/c
 # Herd injected PHP binary.
 export PATH="/Users/ahmed/Library/Application Support/Herd/bin/":$PATH
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+# Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

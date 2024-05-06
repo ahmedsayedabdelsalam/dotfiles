@@ -18,7 +18,10 @@ return {
     -- fancy UI for the debugger
     {
       "rcarriga/nvim-dap-ui",
-      dependencies = { "nvim-neotest/nvim-nio" },
+      dependencies = {
+        "mfussenegger/nvim-dap",
+        "nvim-neotest/nvim-nio"
+      },
       -- stylua: ignore
       keys = {
         { "<leader>du", function() require("dapui").toggle({ }) end, desc = "Dap UI" },
@@ -80,21 +83,28 @@ return {
             require("mason-nvim-dap").default_setup(config)
           end,
           php = function(config)
-            config.configurations = {
+            config.adapters = {
+              type = 'executable',
+              command = 'node',
+              args = { '/path/to/vscode-php-debug/out/phpDebug.js' }
+            }
+
+            config.configurations.php = {
               {
-                type = "php",
-                request = "launch",
-                name = "Listen for Xdebug",
-                port = 9003,
+                type = 'php',
+                request = 'launch',
+                name = 'Listen for Xdebug in Docker',
                 pathMappings = {
-                  -- For some reason xdebug sometimes fails for me, depending on me
-                  -- using herd or docker. To get it to work, change the order of the mappings.
-                  -- The first mapping should be the one that you are actively using.
-                  -- This only started recently, so I don't know what changed.
-                  ["${workspaceFolder}"] = "${workspaceFolder}",
-                  ["/var/www/html"] = "${workspaceFolder}",
+                  ['/var/www'] = '${workspaceFolder}',
                 },
+                repl_lang = 'php_only',
               },
+              {
+                type = 'php',
+                request = 'launch',
+                name = 'Listen for Xdebug',
+                port = 9000
+              }
             }
             require("mason-nvim-dap").default_setup(config) -- don't forget this!
           end,

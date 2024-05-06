@@ -15,7 +15,7 @@ map("v", "<", "<gv", { desc = "indent backword" })
 
 -- terminal mappings
 map({ "n", "t" }, "<leader>tt", function()
-  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm", size = 0.3 }
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
 end, { desc = "Toggle horizontal term" })
 map({ "n", "t" }, "<leader>ft", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }

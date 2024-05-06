@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "cssls", "tsserver", "phpactor", "solargraph", "tailwindcss", "dartls", "clangd" }
+local servers = { "cssls", "tsserver", "phpactor", "solargraph", "dartls", "clangd" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -26,6 +26,25 @@ lspconfig.emmet_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue", "blade" },
+}
+
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    emmetCompletions = true,
+    experimental = {
+      classRegex = false,
+    },
+    classAttributes = {
+      'class',
+      '@class',
+      'className',
+      'class:list',
+      'classList',
+      'ngClass',
+    },
+  },
 }
 
 lspconfig.intelephense.setup {

@@ -34,15 +34,6 @@ brew bundle --file ./Brewfile
 # Set default MySQL root password and auth type
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
-# Install PHP extensions with PECL
-pecl install imagick redis
-
-# Install global Composer packages
-composer global require laravel/installer laravel/valet
-
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
-
 # Create a Sites directory
 mkdir $HOME/Sites
 
@@ -74,13 +65,6 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Neovim
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvchad $HOME/.config/nvim
-
-# Kitty
-rm -rf $HOME/.config/kitty
-ln -s $DOTFILES/kitty $HOME/.config/kitty
-
-# Tmux
-ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 # Git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig

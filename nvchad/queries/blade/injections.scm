@@ -8,6 +8,7 @@
     (#set! injection.combined)
     (#set! injection.language bash))
 
+
 ((php_only) @injection.content
     (#set! injection.combined)
     (#set! injection.language php_only))
