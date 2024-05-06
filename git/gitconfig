@@ -1,7 +1,7 @@
 [user]
-	name = Ahmed Sayed Abdelsalam
-	email = e.eng.ahmedsayed@gmail.com
-	signingkey = 2799ED901E8A1E61
+    name = Ahmed Sayed Abdelsalam
+	  email = e.eng.ahmedsayed@gmail.com
+	  signingkey = 2799ED901E8A1E61
 
 [alias]
     a = add
@@ -61,7 +61,7 @@
 [color]
     ui = auto
 [commit]
-    gpgsign = true
+    ; gpgsign = true
 	template = /Users/ahmed/.stCommitMsg
 [core]
     editor = nvim
