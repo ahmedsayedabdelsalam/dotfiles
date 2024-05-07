@@ -14,6 +14,9 @@ M.ui = {
     },
   },
 
+  -- fix: https://github.com/NvChad/NvChad/issues/1656
+  lsp = { signature = false },
+
   nvdash = {
     load_on_startup = true,
     header = {

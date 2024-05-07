@@ -19,7 +19,6 @@ return {
       "php",
       "php_only",
       "ruby",
-      "blade",
 
      -- low level
       "c",
