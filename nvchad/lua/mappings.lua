@@ -38,3 +38,5 @@ map("n", "<leader>f.", function()
     },
   }
 end, { desc = "Live grep, including hidden files" })
+
+map("n", "<leader>cr", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
