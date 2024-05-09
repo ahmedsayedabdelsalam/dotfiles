@@ -43,5 +43,3 @@ end)
 -- vscode format i.e json files
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/vsc_snippets"
 
--- use 'rcarriga/nvim-notify' as default notification
-vim.notify = require("notify")
