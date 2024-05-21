@@ -9,6 +9,7 @@ tap 'homebrew/bundle'
 brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'eza' # Better ls
 brew 'ffmpeg'
 brew 'gh'
 brew 'git'
@@ -21,6 +22,9 @@ brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
 brew 'svn' # Needed to install fonts
+brew 'zoxide' # Better cd
+brew 'zsh-autosuggestions'
+brwe 'zsh-syntax-highlighting'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -42,6 +46,7 @@ brew 'pyenv'
 brew 'python-setuptools'
 
 # Apps
+cask 'alacritty'
 cask 'android-studio'
 cask 'browserosaurus'
 cask 'caffeine'
@@ -81,6 +86,7 @@ cask 'quicklook-json'
 cask 'font-fira-code'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'font-lato'
+cask 'font-meslo-lg-nerd-font'
 cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'

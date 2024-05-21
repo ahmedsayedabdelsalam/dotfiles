@@ -9,6 +9,12 @@ alias m1="arch -x86_64"
 alias vim=nvim
 alias vi=nvim
 
+# Eza (better ls)
+alias ls="eza --icons=always"
+
+# Zoxide (better cd)
+alias cd="z"
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias sites="cd $HOME/Sites"
