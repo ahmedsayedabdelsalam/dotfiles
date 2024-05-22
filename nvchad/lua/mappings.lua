@@ -17,7 +17,7 @@ map("v", "<", "<gv", { desc = "indent backword" })
 map({ "n", "t" }, "<leader>tt", function()
   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
 end, { desc = "Toggle horizontal term" })
-map({ "n", "t" }, "<leader>ft", function()
+map({ "n", "t" }, "<leader>tf", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
 end, { desc = "Terminal Toggle Floating term" })
 
@@ -39,4 +39,13 @@ map("n", "<leader>f.", function()
   }
 end, { desc = "Live grep, including hidden files" })
 
+map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+
 map("n", "<leader>cr", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+map("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+map("n", "<leader>ss", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+
+map("n", "<leader>lf", vim.diagnostic.open_float, { desc = "lsp diagnostic float" })

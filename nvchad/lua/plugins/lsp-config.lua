@@ -5,6 +5,10 @@ return {
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
+    dependencies = {
+      { "antosha417/nvim-lsp-file-operations", config = true },
+      { "folke/neodev.nvim", opts = {} },
+    },
   },
 
   -- popup code action window

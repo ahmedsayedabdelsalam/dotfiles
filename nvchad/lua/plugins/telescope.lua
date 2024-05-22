@@ -1,4 +1,11 @@
 return {
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "folke/todo-comments.nvim",
+    },
+  },
+
   -- to enable find in files with advanced options
   {
     "nvim-telescope/telescope-live-grep-args.nvim",

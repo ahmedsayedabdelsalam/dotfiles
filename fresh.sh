@@ -66,6 +66,12 @@ rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvchad $HOME/.config/nvim
 
 # Alacritty
+rm -rf $HOME/.tmux
+rm -rf $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/.tmux $HOME/.tmux
+ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
+
+# Tmux
 rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 

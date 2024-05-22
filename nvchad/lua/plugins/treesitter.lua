@@ -25,11 +25,17 @@ return {
       "cpp",
       "zig"
     },
-    autotag = { -- 'windwp/nvim-ts-autotag'
-      enable = false, -- this breaks dot repeating with `>`
-    },
     endwise = { -- 'RRethy/nvim-treesitter-endwise',
       enable = true,
+    },
+    incremental_selection = {
+      enable = true,
+      keymaps = { -- set to `false` to disable one of the mappings
+        init_selection = "gnn",
+        node_incremental = "grn",
+        scope_incremental = "grc",
+        node_decremental = "grm",
+      },
     },
     textobjects = { -- 'nvim-treesitter/nvim-treesitter-textobjects',
       select = {
@@ -67,11 +73,19 @@ return {
           "src/parser.c",
           -- 'src/scanner.cc',
         },
+        branch = "main",
         generate_requires_npm = true,
         requires_generate_from_grammar = true,
       },
       filetype = "blade",
     }
+
+    vim.filetype.add({
+      pattern = {
+        [".*%.blade%.php"] = "blade",
+      },
+    })
+
     require("nvim-treesitter.configs").setup(opts)
   end,
 }

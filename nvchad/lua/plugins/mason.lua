@@ -10,6 +10,7 @@ return {
       "html-lsp",
       "typescript-language-server",
       "prettier",
+      "eslint_d",
       "emmet-ls",
       "tailwindcss-language-server",
       "rustywind",

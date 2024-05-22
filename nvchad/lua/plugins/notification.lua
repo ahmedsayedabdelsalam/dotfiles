@@ -4,8 +4,13 @@ return {
     "rcarriga/nvim-notify",
     config = function()
       local notify = require "notify"
-      -- this for transparency
-      notify.setup { background_colour = "#000000" }
+      notify.setup {
+        -- this for transparency
+        background_colour = "#000000",
+        top_down = false,
+        render = 'wrapped-compact',
+        -- level = vim.log.levels.WARN
+      }
       -- this overwrites the vim notify function
       vim.notify = notify.notify
     end,

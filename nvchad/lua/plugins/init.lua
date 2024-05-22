@@ -15,4 +15,7 @@ return {
       { "<leader>sc", ":CodeSnap<CR>", mode = "v" },
     },
   },
+
+  -- nice action window
+  { "stevearc/dressing.nvim" },
 }
