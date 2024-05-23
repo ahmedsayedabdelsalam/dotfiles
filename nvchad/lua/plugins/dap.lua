@@ -1,9 +1,14 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    dependencies = {
+      "suketa/nvim-dap-ruby"
+    },
     config = function()
       local dap = require "dap"
       local registry = require "mason-registry"
+
+      require("dap-ruby").setup()
 
       -- dap.set_log_level('TRACE')
 
