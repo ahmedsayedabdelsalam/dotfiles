@@ -32,17 +32,19 @@ lspconfig.tailwindcss.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
-    emmetCompletions = true,
-    experimental = {
-      classRegex = false,
-    },
-    classAttributes = {
-      'class',
-      '@class',
-      'className',
-      'class:list',
-      'classList',
-      'ngClass',
+    tailwindCSS = {
+      emmetCompletions = true,
+      experimental = {
+        classRegex = false,
+      },
+      classAttributes = {
+        'class',
+        '@class',
+        'className',
+        'class:list',
+        'classList',
+        'ngClass',
+      },
     },
   },
 }

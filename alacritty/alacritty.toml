@@ -9,6 +9,7 @@ import = [
 TERM = "xterm-256color"
 
 [window]
+startup_mode = "SimpleFullscreen"
 padding.x = 10
 padding.y = 10
 
@@ -21,5 +22,7 @@ option_as_alt = "Both"
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
+offset.y = 10
+glyph_offset.y = 5
 
 size = 14
