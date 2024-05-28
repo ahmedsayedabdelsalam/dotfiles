@@ -22,7 +22,5 @@ option_as_alt = "Both"
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-offset.y = 10
-glyph_offset.y = 5
 
 size = 14

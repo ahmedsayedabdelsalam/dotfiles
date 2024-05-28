@@ -6,11 +6,15 @@ local M = {}
 
 M.ui = {
   theme = "bearded-arc",
+  transparency = true,
 
   hl_override = {
     NvDashAscii = {
       fg = 'white',
-      bg = 'black',
+      bg = 'NONE',
+    },
+    NvDashButtons = {
+      bg = 'NONE',
     },
   },
 

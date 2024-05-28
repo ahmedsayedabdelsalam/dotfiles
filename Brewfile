@@ -46,7 +46,6 @@ brew 'pyenv'
 brew 'python-setuptools'
 
 # Apps
-cask 'alacritty'
 cask 'android-studio'
 cask 'arc'
 cask 'browserosaurus'
@@ -75,6 +74,7 @@ cask 'telegram'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'wezterm'
 cask 'whatsapp'
 cask 'zoom'
 
