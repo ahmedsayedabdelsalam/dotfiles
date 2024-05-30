@@ -66,9 +66,10 @@
 [core]
     editor = nvim
     excludesfile = ~/.gitignore_global
-    ; pager = delta
+    pager = delta
 [diff]
     tool = vimdiff
+    colorMoved = default
 [fetch]
     prune = true
 [help]
@@ -80,7 +81,7 @@
 [rerere]
     enabled = true
 [merge]
-    ; conflictstyle = diff3
+    conflictstyle = diff3
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -90,6 +91,7 @@
     plus-emph-style = "syntax #2D4E45"
     minus-style = "syntax #3B2C37"
     minus-emph-style = "syntax #613038"
+    side-by-side = true
 [pull]
     rebase = false
 [init]

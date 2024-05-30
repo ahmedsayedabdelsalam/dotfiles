@@ -173,5 +173,8 @@ setopt hist_verify
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 
+# Bat (better cat)
+export BAT_THEME=tokyonight_night
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

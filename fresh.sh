@@ -89,3 +89,7 @@ ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
 # NVM (Node Version Manager)
 mkdir -p $HOME/.nvm
 ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
+
+# Bat
+rm -rf $HOME/.config/bat
+ln -s $DOTFILES/bat $HOME/.config/bat

@@ -8,6 +8,7 @@ tap 'homebrew/bundle'
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
+brew 'bat' # better cat
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'eza' # Better ls
 brew 'ffmpeg'
