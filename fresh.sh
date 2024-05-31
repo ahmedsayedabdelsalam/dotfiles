@@ -93,3 +93,7 @@ ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 # Bat
 rm -rf $HOME/.config/bat
 ln -s $DOTFILES/bat $HOME/.config/bat
+
+# FZF
+rm -rf $HOME/fzf
+ln -s $DOTFILES/fzf $HOME/fzf

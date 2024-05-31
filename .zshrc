@@ -173,8 +173,16 @@ setopt hist_verify
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 
+# FZF
+source ~/fzf/fzf.sh
+
 # Bat (better cat)
 export BAT_THEME=tokyonight_night
+
+# ---- TheFuck -----
+# thefuck alias
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

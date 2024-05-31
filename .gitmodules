@@ -8,3 +8,6 @@
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
   ignore = untracked
+[submodule "fzf/fzf-git.sh"]
+	path = fzf/fzf-git.sh
+	url = https://github.com/junegunn/fzf-git.sh.git

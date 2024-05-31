@@ -11,7 +11,9 @@ brew 'bash' # Latest Bash version
 brew 'bat' # better cat
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'eza' # Better ls
+brew 'fd'
 brew 'ffmpeg'
+brew 'fzf'
 brew 'gh'
 brew 'git'
 brew 'grep'
@@ -23,6 +25,8 @@ brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
 brew 'svn' # Needed to install fonts
+brew 'thefuck'
+brew 'tlrc' # tldr (better man)
 brew 'zoxide' # Better cd
 brew 'zsh-autosuggestions'
 brwe 'zsh-syntax-highlighting'
