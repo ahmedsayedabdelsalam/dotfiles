@@ -19,6 +19,7 @@ brew 'git'
 brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
+brew 'lazygit'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
@@ -27,6 +28,7 @@ brew 'rg'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
+brew 'wget'
 brew 'zoxide' # Better cd
 brew 'zsh-autosuggestions'
 brwe 'zsh-syntax-highlighting'
