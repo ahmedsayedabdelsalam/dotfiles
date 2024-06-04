@@ -140,8 +140,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 
-[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
-
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/83/"
@@ -150,7 +148,6 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/c
 # Herd injected PHP binary.
 export PATH="/Users/ahmed/Library/Application Support/Herd/bin/":$PATH
 
-# Q post block. Keep at the bottom of this file.
 # Powerlevel10k
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
