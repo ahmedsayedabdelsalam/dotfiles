@@ -35,5 +35,8 @@ wezterm.on("gui-startup", function(cmd)
   window:gui_window():maximize()
 end)
 
+-- start with zellij
+-- config.default_prog = { "zellij", "-l", "welcome" }
+
 -- and finally, return the configuration to wezterm
 return config
