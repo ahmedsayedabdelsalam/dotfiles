@@ -15,9 +15,6 @@ alias ls="eza --icons=always"
 # Zoxide (better cd)
 alias cd="z"
 
-# Zellij
-alias ze="zellij"
-
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias sites="cd $HOME/Sites"
