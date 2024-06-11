@@ -9,9 +9,9 @@ return {
 
       -- php stuff
       "intelephense",
-      "phpactor",
       "phpstan",
-      "php-debug-adapter",
+      "pint",
+      "blade-formatter",
     })
   end,
 }
