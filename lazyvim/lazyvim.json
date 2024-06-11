@@ -3,7 +3,8 @@
     "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.lang.php",
     "lazyvim.plugins.extras.lang.ruby",
-    "lazyvim.plugins.extras.lang.tailwind"
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lsp.none-ls"
   ],
   "news": {
     "NEWS.md": "6077"
