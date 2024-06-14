@@ -29,6 +29,7 @@ brew 'svn' # Needed to install fonts
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
 brew 'wget'
+brew 'zellij' # terminal multiplixer (better tmux)
 brew 'zoxide' # Better cd
 brew 'zsh-autosuggestions'
 brwe 'zsh-syntax-highlighting'
@@ -53,6 +54,7 @@ brew 'pyenv'
 brew 'python-setuptools'
 
 # Apps
+cask 'alacritty'
 cask 'android-studio'
 cask 'arc'
 cask 'browserosaurus'
