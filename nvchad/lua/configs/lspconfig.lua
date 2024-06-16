@@ -65,6 +65,6 @@ lspconfig.intelephense.setup {
 }
 
 -- disable diagnostic virtual text
-vim.diagnostic.config({
-  virtual_text = false,
-})
+-- vim.diagnostic.config({
+--   virtual_text = false,
+-- })

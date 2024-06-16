@@ -48,4 +48,4 @@ map("n", "<leader>ss", "<C-w>s", { desc = "Split window horizontally" })
 map("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
-map("n", "<leader>lf", vim.diagnostic.open_float, { desc = "lsp diagnostic float" })
+-- map("n", "<leader>lf", vim.diagnostic.open_float, { desc = "lsp diagnostic float" })

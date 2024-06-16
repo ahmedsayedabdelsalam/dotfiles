@@ -15,6 +15,9 @@ alias ls="eza --icons=always"
 # Zoxide (better cd)
 alias cd="z"
 
+# Bat (better cat)
+alias cat="bat"
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias sites="cd $HOME/Sites"
