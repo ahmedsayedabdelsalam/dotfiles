@@ -173,9 +173,6 @@ eval "$(zoxide init zsh)"
 # FZF
 source ~/fzf/fzf.sh
 
-# Bat (better cat)
-export BAT_THEME=tokyonight_night
-
 # ---- TheFuck -----
 # thefuck alias
 eval $(thefuck --alias)
