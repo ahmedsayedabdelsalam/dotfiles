@@ -1,0 +1,21 @@
+layout {
+    tab name="code" focus=true {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane name="code" edit="."
+    }
+    tab name="cmd" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane name="cmd"
+            pane stacked=true {
+                pane name="npm" command="npm" start_suspended=true {
+                    args "run" "dev"
+                }
+            }
+        }
+    }
+}

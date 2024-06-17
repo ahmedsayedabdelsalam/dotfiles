@@ -26,6 +26,15 @@ return {
     },
   },
   {
+  "nvim-lualine/lualine.nvim",
+    opts = {
+      options = {
+        component_separators = '',
+        section_separators = { left = '', right = '' },
+      }
+    }
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-mocha",
