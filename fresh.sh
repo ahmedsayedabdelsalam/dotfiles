@@ -69,6 +69,10 @@ ln -s $DOTFILES/nvchad $HOME/.config/nvim
 rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 
+# Wezterm
+rm -rf $HOME/.config/wezterm
+ln -s $DOTFILES/wezterm $HOME/.config/wezterm
+
 # Tmux
 rm -rf $HOME/.tmux
 rm -rf $HOME/.tmux.conf

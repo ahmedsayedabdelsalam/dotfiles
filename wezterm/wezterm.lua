@@ -4,6 +4,8 @@ local mux = wezterm.mux
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local b = require("utils.background")
+local assets = wezterm.config_dir .. "/assets"
 
 -- This is where you actually apply your config choices
 
@@ -21,6 +23,12 @@ local config = wezterm.config_builder()
 -- }
 
 config.color_scheme = 'Catppuccin Mocha'
+config.background = {
+  b.get_background(true, 0.7),
+  b.get_animation(assets .. "/blob_blue.gif"),
+}
+-- table.insert(config.background, 1, b.get_wallpaper(assets .. "/blob_blue.gif"))
+
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 14

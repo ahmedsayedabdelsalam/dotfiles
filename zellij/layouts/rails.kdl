@@ -3,7 +3,7 @@ layout {
         pane size=1 borderless=true {
             plugin location="tab-bar"
         }
-        pane name="code" edit="."
+        pane name="code"
     }
     tab name="cmd" {
         pane size=1 borderless=true {
