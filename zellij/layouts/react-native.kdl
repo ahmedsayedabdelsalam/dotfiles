@@ -1,0 +1,24 @@
+layout {
+    tab name="code" focus=true {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane name="code"
+    }
+    tab name="cmd" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane name="cmd"
+            pane stacked=true {
+                pane name="metro" command="yarn" start_suspended=true expanded=true {
+                    args "start"
+                }
+                pane name="build ios" command="yarn" start_suspended=true {
+                    args "ios"
+                }
+            }
+        }
+    }
+}

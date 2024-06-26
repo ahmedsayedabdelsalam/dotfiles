@@ -178,5 +178,8 @@ source ~/fzf/fzf.sh
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
+# zulu@17
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
