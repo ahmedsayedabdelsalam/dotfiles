@@ -8,6 +8,7 @@ alias c="clear"
 alias m1="arch -x86_64"
 alias vim=nvim
 alias vi=nvim
+alias k=kubectl
 
 # Eza (better ls)
 alias ls="eza --icons=always"
