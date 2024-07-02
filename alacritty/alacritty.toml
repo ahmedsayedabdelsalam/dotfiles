@@ -1,6 +1,8 @@
 import = [
   # alacritty themes
   # "~/.config/alacritty/themes/themes/coolnight.toml",
+  # catppuccin themes
+  # "~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
   # custom theme
   "~/.config/alacritty/custom/themes/coolnight.toml",
 ]
