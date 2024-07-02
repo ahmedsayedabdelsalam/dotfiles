@@ -39,6 +39,11 @@ return {
           filetypes_include = { "blade" },
         },
       },
+
+      solargraph = {
+        autostart = false,
+      },
+      ruby_lsp = {},
     },
   },
 }
