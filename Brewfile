@@ -19,12 +19,15 @@ brew 'git'
 brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
+brew 'kubectx' # Switch k8s context and namespace
+brew 'k9s' # Easy k8s
 brew 'lazygit'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
+brew 'stern'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
