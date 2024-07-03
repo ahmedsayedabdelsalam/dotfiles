@@ -111,4 +111,5 @@ mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'SHAREit', id: 1040029915
+mas 'Toggl Track: Hours & Time Log', id: 1291898086
 mas 'Xcode', id: 497799835
