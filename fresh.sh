@@ -105,3 +105,9 @@ ln -s $DOTFILES/bat $HOME/.config/bat
 # FZF
 rm -rf $HOME/fzf
 ln -s $DOTFILES/fzf $HOME/fzf
+
+# k9s
+rm -rf ~/Library/Application\ Support/k9s/config.yaml
+rm -rf ~/Library/Application\ Support/k9s/skins
+ln -s $DOTFILES/k9s/config.yaml $HOME/Library/Application\ Support/k9s/config.yaml
+ln -s $DOTFILES/k9s/skins $HOME/Library/Application\ Support/k9s/skins
