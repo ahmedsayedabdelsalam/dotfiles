@@ -35,20 +35,6 @@ M.get_wallpaper = function(wallpaper)
   }
 end
 
-M.get_random_wallpaper = function(dir)
-  dir = dir or os.getenv("HOME") .. "/.config/wezterm/assets/***.{jpg,jpeg,png}"
-  local wallpapers = {}
-  for _, v in ipairs(wezterm.glob(dir)) do
-    if not string.match(v, "%.DS_Store$") then
-      table.insert(wallpapers, v)
-    end
-  end
-
-  local wallpaper = h.get_random_entry(wallpapers)
-
-  return M.get_wallpaper(wallpaper)
-end
-
 M.get_animation = function(animation)
   return {
     source = {
@@ -69,20 +55,6 @@ M.get_animation = function(animation)
       brightness = 0.1,
     },
   }
-end
-
-M.get_random_animation = function(dir)
-  dir = dir or os.getenv("HOME") .. "/.config/wezterm/assets"
-  local animations = {}
-  for _, v in ipairs(wezterm.glob(dir)) do
-    if not string.match(v, "%.DS_Store$") then
-      table.insert(animations, v)
-    end
-  end
-
-  local animation = h.get_random_entry(animations)
-
-  return M.get_animation(animation)
 end
 
 return M

@@ -27,7 +27,6 @@ config.background = {
   b.get_background(true, 0.7),
   b.get_animation(assets .. "/blob_blue.gif"),
 }
--- table.insert(config.background, 1, b.get_wallpaper(assets .. "/blob_blue.gif"))
 
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
