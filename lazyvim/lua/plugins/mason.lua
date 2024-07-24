@@ -12,9 +12,6 @@ return {
       "phpstan",
       "pint",
       "blade-formatter",
-
-      -- ruby stuff
-      "ruby-lsp",
     })
   end,
 }
