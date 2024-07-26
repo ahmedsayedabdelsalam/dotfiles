@@ -73,6 +73,10 @@ ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 rm -rf $HOME/.config/wezterm
 ln -s $DOTFILES/wezterm $HOME/.config/wezterm
 
+# Kitty
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config/kitty
+
 # Tmux
 rm -rf $HOME/.tmux
 rm -rf $HOME/.tmux.conf
