@@ -6,6 +6,7 @@ local mux = wezterm.mux
 local config = wezterm.config_builder()
 local b = require("utils.background")
 local assets = wezterm.config_dir .. "/assets"
+local transparent = true
 
 -- This is where you actually apply your config choices
 
@@ -23,10 +24,14 @@ local assets = wezterm.config_dir .. "/assets"
 -- }
 
 config.color_scheme = 'Catppuccin Mocha'
-config.background = {
-  b.get_background(true, 0.7),
-  b.get_animation(assets .. "/blob_blue.gif"),
-}
+if transparent then
+  config.background = {
+    b.get_background(true, 0.7),
+    b.get_animation(assets .. "/blob_blue.gif"),
+  }
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 30
+end
 
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
@@ -35,8 +40,6 @@ config.font_size = 14
 config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 30
 
 -- start fullscreen
 wezterm.on("gui-startup", function(cmd)
