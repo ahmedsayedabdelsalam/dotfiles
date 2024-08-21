@@ -16,6 +16,7 @@ brew 'ffmpeg'
 brew 'fzf'
 brew 'gh'
 brew 'git'
+brew 'git-delta'
 brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
