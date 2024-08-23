@@ -123,11 +123,16 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# RBENV
+# RBENV (Ruby version manager)
 eval "$(rbenv init - zsh)"
 
-# NVM
+# NVM (Node version manager)
 . "$DOTFILES/nvm.sh"
+
+# PYENV (Python version manager)
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Android
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
