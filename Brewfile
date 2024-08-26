@@ -59,6 +59,7 @@ brew 'zulu@17' # java development kit for running android apps
 # Apps
 cask 'nikitabobko/tap/aerospace'
 cask 'alacritty'
+cask 'alt-tab'
 cask 'android-studio'
 cask 'arc'
 cask 'browserosaurus'
