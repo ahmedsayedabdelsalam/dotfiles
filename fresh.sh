@@ -95,9 +95,6 @@ ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 rm -rf $HOME/.config/phpactor
 ln -s $DOTFILES/phpactor $HOME/.config/phpactor
 
-# Scripts
-ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
-
 # Mise (Node | Ruby ...etc Version Manager)
 ln -sf $DOTFILES/mise/.default-npm-packages $HOME/.default-npm-packages
 
