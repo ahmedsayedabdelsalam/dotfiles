@@ -98,9 +98,8 @@ ln -s $DOTFILES/phpactor $HOME/.config/phpactor
 # Scripts
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
 
-# NVM (Node Version Manager)
-mkdir -p $HOME/.nvm
-ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
+# Mise (Node | Ruby ...etc Version Manager)
+ln -sf $DOTFILES/mise/.default-npm-packages $HOME/.default-npm-packages
 
 # Bat
 rm -rf $HOME/.config/bat

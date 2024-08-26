@@ -28,12 +28,14 @@ brew 'mas' # Mac App Store manager
 brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
+brew 'sesh' # session manager for tmux
 brew 'stern'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
+brew 'tmux'
 brew 'wget'
-brew 'zellij' # terminal multiplixer (better tmux)
+# brew 'zellij' # terminal multiplixer (better tmux)
 brew 'zoxide' # Better cd
 brew 'zsh-autosuggestions'
 brwe 'zsh-syntax-highlighting'
@@ -48,13 +50,9 @@ brew 'gifsicle'
 # Development
 brew 'imagemagick'
 brew 'mailpit'
-brew 'nvm'
-brew 'yarn'
-brew 'rbenv'
-brew 'ruby-build'
+brew 'mice'
 brew 'watchman'
 brew 'gitmoji'
-brew 'pyenv'
 brew 'python-setuptools'
 brew 'zulu@17' # java development kit for running android apps
 
