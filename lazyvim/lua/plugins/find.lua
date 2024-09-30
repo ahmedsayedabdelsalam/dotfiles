@@ -6,7 +6,7 @@ return {
     },
     keys = {
       {
-        "<leader>sG",
+        "<leader>fd",
         "<cmd>Telescope dir live_grep<CR>",
         noremap = true,
         silent = true,
