@@ -54,7 +54,7 @@ brew 'mice'
 brew 'watchman'
 brew 'gitmoji'
 brew 'python-setuptools'
-brew 'zulu@17' # java development kit for running android apps
+brew 'zulu' # java development kit for running android apps
 
 # Apps
 cask 'alacritty'

@@ -12,6 +12,12 @@ return {
       "phpstan",
       "pint",
       "blade-formatter",
+
+
+      -- java stuff
+      "java-debug-adapter",
+      "java-test",
+      "xmlformatter",
     })
   end,
 }
