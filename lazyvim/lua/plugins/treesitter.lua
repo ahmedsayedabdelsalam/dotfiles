@@ -8,6 +8,7 @@ return {
       "json",
       "blade",
       "php_only",
+      "java",
     },
   },
   config = function(_, opts)
