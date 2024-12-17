@@ -165,7 +165,7 @@ eval $(thefuck --alias fk)
 # Yazi
 source ~/.config/yazi/yazi.zsh
 
-# zulu@17
+# zulu@23
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-23.jdk/Contents/Home
 
 export EDITOR=nvim
@@ -201,3 +201,6 @@ export PATH="/Users/ahmed/Library/Application Support/Herd/bin/":$PATH
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/83/"
+
+export GITHUB_USER=ahmedsayedabdelsalam
+export GITHUB_PAT=$(security find-generic-password -s "github_pat" -w)
