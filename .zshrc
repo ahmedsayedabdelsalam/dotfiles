@@ -204,3 +204,6 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/c
 
 export GITHUB_USER=ahmedsayedabdelsalam
 export GITHUB_PAT=$(security find-generic-password -s "github_pat" -w)
+export MASTER_GITHUB_USER="$GITHUB_USER"
+export MASTER_GITHUB_PAT="$GITHUB_PAT"
+
