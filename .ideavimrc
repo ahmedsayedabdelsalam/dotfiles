@@ -64,6 +64,7 @@ set scrolloff=5                                     " minimum number of lines ab
 set ignorecase                                      " search case insensitive
 set incsearch                                       " go to matched search while typing
 set number                                          " print the line number in front of each line
+set clipboard+=unnamed                              " yank to system clipboard
 
 
 """ Map leader to space ---------------------
@@ -81,6 +82,8 @@ nmap <leader><leader> <Action>(GotoFile)
 nmap <leader>fd <Action>(FindInPath)
 nmap <leader>fr <Action>(RecentFiles)
 
+nmap <leader>sg <Action>(FindInPath)
+
 nmap <leader>bd <Action>(CloseContent)
 nmap <leader>bo <Action>(CloseAllEditorsButActive)
 
@@ -92,3 +95,5 @@ map <leader>e :NERDTreeToggle<CR>
 
 nmap L <Action>(NextTab)
 nmap H <Action>(PreviousTab)
+
+nmap gI <Action>(GotoImplementation)
