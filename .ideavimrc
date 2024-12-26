@@ -96,4 +96,5 @@ map <leader>e :NERDTreeToggle<CR>
 nmap L <Action>(NextTab)
 nmap H <Action>(PreviousTab)
 
-nmap gI <Action>(GotoImplementation)
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)

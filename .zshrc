@@ -165,8 +165,8 @@ eval $(thefuck --alias fk)
 # Yazi
 source ~/.config/yazi/yazi.zsh
 
-# zulu@23
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-23.jdk/Contents/Home
+# zulu@17
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 export EDITOR=nvim
 
