@@ -35,6 +35,7 @@ brew 'thefuck'
 brew 'tlrc' # tldr (better man)
 brew 'tmux'
 brew 'wget'
+brew 'yazi'
 # brew 'zellij' # terminal multiplixer (better tmux)
 brew 'zoxide' # Better cd
 brew 'zsh-autosuggestions'
@@ -69,6 +70,7 @@ cask 'orbstack'
 cask 'figma'
 cask 'flipper'
 cask 'flycut'
+cask 'ghostty'
 cask 'herd'
 cask 'imageoptim'
 cask 'iterm2'

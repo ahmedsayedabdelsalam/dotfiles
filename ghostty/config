@@ -1,0 +1,11 @@
+theme = catppuccin-mocha
+background-opacity = 0.85
+background-blur-radius = 10
+
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13
+
+macos-titlebar-style = hidden
+
+window-width = 1000
+window-height = 1000

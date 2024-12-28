@@ -77,6 +77,10 @@ ln -s $DOTFILES/wezterm $HOME/.config/wezterm
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
+# Ghostty
+rm -rf $HOME/.config/ghostty
+ln -s $DOTFILES/ghostty $HOME/.config/ghostty
+
 # Tmux
 rm -rf $HOME/.tmux
 rm -rf $HOME/.tmux.conf
