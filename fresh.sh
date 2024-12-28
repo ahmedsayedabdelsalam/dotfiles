@@ -110,6 +110,10 @@ ln -s $DOTFILES/bat $HOME/.config/bat
 rm -rf $HOME/fzf
 ln -s $DOTFILES/fzf $HOME/fzf
 
+# Yazi
+rm -rf $HOME/.config/yazi
+ln -s $DOTFILES/yazi $HOME/.config/yazi
+
 # k9s
 rm -rf ~/Library/Application\ Support/k9s/config.yaml
 rm -rf ~/Library/Application\ Support/k9s/skins
