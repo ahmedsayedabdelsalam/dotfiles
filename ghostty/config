@@ -2,6 +2,10 @@ theme = catppuccin-mocha
 background-opacity = 0.85
 background-blur-radius = 10
 
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-style-blink = false
+
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 13
 
