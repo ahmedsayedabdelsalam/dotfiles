@@ -31,3 +31,31 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end)
   end,
 })
+
+-- Function to detect and build Spring Boot projects
+-- Trigger the build on saving Java or Kotlin files
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.java", "*.kt" },
+  callback = function()
+    local command = nil
+    if vim.fn.filereadable("pom.xml") == 1 then
+      command = "./mvnw compile"
+    elseif vim.fn.filereadable("build.gradle") == 1 then
+      command = "./gradlew compileJava"
+    else
+      print("Not a Spring Boot project (no pom.xml or build.gradle found).")
+      return
+    end
+
+    -- Run the command asynchronously using vim.fn.jobstart
+    vim.fn.jobstart(command, {
+      on_exit = function(_, exit_code)
+        if exit_code == 0 then
+          print("Build successful!")
+        else
+          print("Build failed with exit code " .. exit_code)
+        end
+      end,
+    })
+  end,
+})

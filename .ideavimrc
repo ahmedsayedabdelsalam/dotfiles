@@ -57,9 +57,12 @@ set notimeout
 set NERDTree
 set commentary
 set surround
+set ideajoin
 
 
 """ Common settings -------------------------
+set visualbell
+set noerrorbells
 set scrolloff=5                                     " minimum number of lines above and below the cursor
 set ignorecase                                      " search case insensitive
 set incsearch                                       " go to matched search while typing
@@ -91,10 +94,15 @@ nmap <leader>db <Action>(ToggleLineBreakpoint)
 nmap <leader>dc <Action>(Debug)
 nmap <leader>dt <Action>(Stop)
 
+nmap <leader>ca <Action>(ShowIntentionActions)
+
 map <leader>e :NERDTreeToggle<CR>
+nmap <leader>/ <Action>(ActivateTerminalToolWindow)
+nmap <leader>q <Action>(HideActiveWindow)
 
 nmap L <Action>(NextTab)
 nmap H <Action>(PreviousTab)
+nmap <leader>bo <Action>(CloseAllEditorsButActive)
 
-nmap gi <Action>(GotoImplementation)
+nmap gI <Action>(GotoImplementation)
 nmap gr <Action>(FindUsages)

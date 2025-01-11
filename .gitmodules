@@ -17,3 +17,6 @@
 [submodule "yazi/flavors"]
 	path = yazi/flavors
 	url = https://github.com/yazi-rs/flavors.git
+[submodule "tmux/.tmux/plugins/catppuccin"]
+	path = tmux/.tmux/plugins/catppuccin
+	url = https://github.com/catppuccin/tmux.git

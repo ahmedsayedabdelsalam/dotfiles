@@ -4,6 +4,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'spring-io/tap'
 
 # Binaries
 brew 'awscli'
@@ -29,6 +30,7 @@ brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
 brew 'sesh' # session manager for tmux
+brew 'spring-boot'
 brew 'stern'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'
