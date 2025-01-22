@@ -106,3 +106,5 @@ nmap <leader>bo <Action>(CloseAllEditorsButActive)
 
 nmap gI <Action>(GotoImplementation)
 nmap gr <Action>(FindUsages)
+
+nmap <leader>cr <Action>(RenameElement)
