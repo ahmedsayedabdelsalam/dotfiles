@@ -9,7 +9,5 @@ cursor-style-blink = false
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 13
 
-macos-titlebar-style = hidden
-
 window-width = 1000
 window-height = 1000
