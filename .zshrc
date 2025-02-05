@@ -165,8 +165,10 @@ eval $(thefuck --alias fk)
 # Yazi
 source ~/.config/yazi/yazi.zsh
 
-# zulu@17
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+# Jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# export JAVA_TOOL_OPTIONS="-Xmx2G -Xms512M"
 
 export EDITOR=nvim
 

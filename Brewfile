@@ -20,6 +20,7 @@ brew 'git'
 brew 'git-delta'
 brew 'grep'
 brew 'httpie'
+brew 'java'
 brew 'jq' # Used for spatie/visit
 brew 'kubectx' # Switch k8s context and namespace
 brew 'k9s' # Easy k8s
@@ -52,12 +53,12 @@ brew 'gifsicle'
 
 # Development
 brew 'imagemagick'
+brew 'jenv'
 brew 'mailpit'
 brew 'mice'
 brew 'watchman'
 brew 'gitmoji'
 brew 'python-setuptools'
-brew 'zulu' # java development kit for running android apps
 
 # Apps
 cask 'alacritty'
