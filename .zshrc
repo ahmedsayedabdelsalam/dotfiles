@@ -190,13 +190,6 @@ bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
 
 
-
-# Herd injected NVM configuration
-export NVM_DIR="/Users/ahmed/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
-
 # Herd injected PHP binary.
 export PATH="/Users/ahmed/Library/Application Support/Herd/bin/":$PATH
 
