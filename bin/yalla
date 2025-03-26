@@ -1,0 +1,147 @@
+#!/bin/bash
+
+set -e
+
+CONFIG_DIR="$HOME/.yalla"
+CONFIG_FILE="$CONFIG_DIR/config"
+
+confirm() {
+	read -p "$1 (Y/n): " choice
+	choice=${choice:-y} # Default to "y" if Enter is pressed
+	[[ "$choice" == "y" || "$choice" == "Y" ]]
+}
+
+find_services() {
+	local inputs=("$@")
+	local matches=()
+	local services
+	services=$(brew services list | awk 'NR>1 {print $1}') # Get available services
+
+	for input in "${inputs[@]}"; do
+		local found=""
+		for service in $services; do
+			if [[ "$service" == *"$input"* ]]; then
+				found="$service"
+				break
+			fi
+		done
+
+		[[ -n "$found" ]] && matches+=("$found")
+	done
+
+	echo "${matches[@]}" # Return only matched services (no error messages)
+}
+
+handle_services() {
+	local action="$1"
+	shift
+	local skip_confirm="$1"
+	shift
+	local requested_services=("$@")
+
+	matched_services=($(find_services "${requested_services[@]}"))
+
+	if [[ ${#matched_services[@]} -eq 0 ]]; then
+		echo "❌ No valid services found. Exiting."
+		exit 1 # Exit immediately without confirmation
+	fi
+
+	local action_emoji=""
+	local action_text=""
+	if [[ "$action" == "run" ]]; then
+		action_emoji="🚀"
+		action_text="Starting"
+	elif [[ "$action" == "stop" ]]; then
+		action_emoji="🛑"
+		action_text="Stopping"
+	fi
+
+	echo "$action_emoji $action_text services: ${matched_services[*]}"
+
+	if [[ "$skip_confirm" != "yes" ]]; then
+		confirm "Proceed?"
+		[[ $? -ne 0 ]] && exit 0 # Exit if the user says "No"
+	fi
+
+	for service in "${matched_services[@]}"; do
+		echo "$action_emoji $action_text: $service"
+		brew services "$action" "$service"
+	done
+}
+
+configure_project() {
+	read -p "Enter project name: " project
+	project=$(echo "$project" | tr ' ' '_') # Replace spaces with underscores
+
+	echo "Enter services for $project (space-separated):"
+	read -a input_services
+
+	matched_services=($(find_services "${input_services[@]}"))
+
+	if [[ ${#matched_services[@]} -eq 0 ]]; then
+		echo "❌ No valid services found. Exiting."
+		exit 1
+	fi
+
+	echo "🔧 Matched services: ${matched_services[*]}"
+	confirm "Save this configuration?"
+	[[ $? -ne 0 ]] && exit 0 # Exit if the user says "No"
+
+	mkdir -p "$CONFIG_DIR"                                       # Ensure config directory exists
+	sed -i '' "/^\[$project\]/,/^$/d" "$CONFIG_FILE" 2>/dev/null # Remove existing config for project
+	echo "[$project]" >>"$CONFIG_FILE"
+	echo "services=${matched_services[*]}" >>"$CONFIG_FILE"
+
+	echo "✅ Project '$project' configured with services: ${matched_services[*]}"
+}
+
+load_project_services() {
+	local project="$1"
+	if [[ ! -f "$CONFIG_FILE" ]]; then
+		echo "❌ No project configurations found."
+		exit 1
+	fi
+
+	local services
+	services=$(awk -v p="[$project]" '$0 == p {getline; print}' "$CONFIG_FILE" | cut -d'=' -f2)
+
+	if [[ -z "$services" ]]; then
+		echo "❌ No services configured for project '$project'."
+		exit 1
+	fi
+
+	echo "$services"
+}
+
+if [[ "$1" == "config" ]]; then
+	configure_project
+	exit 0
+fi
+
+if [[ "$#" -lt 2 ]]; then
+	echo "Usage:"
+	echo "  yalla up|down <service1> <service2> ..."
+	echo "  yalla up|down -p <project_name>"
+	echo "  yalla config  # Configure a project"
+	exit 1
+fi
+
+command="$1"
+shift
+
+if [[ "$1" == "-p" ]]; then
+	shift
+	project="$1"
+	shift
+	services=($(load_project_services "$project"))
+	skip_confirm="yes"
+else
+	services=("$@")
+	skip_confirm="no"
+fi
+
+case "$command" in
+up) handle_services "run" "$skip_confirm" "${services[@]}" ;; # Use 'run' for session-only execution
+down) handle_services "stop" "$skip_confirm" "${services[@]}" ;;
+*) echo "Invalid command. Use: yalla up|down <service1> <service2> ..." ;;
+esac

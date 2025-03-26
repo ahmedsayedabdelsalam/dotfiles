@@ -202,3 +202,7 @@ export GITHUB_PAT=$(security find-generic-password -s "github_pat" -w)
 export MASTER_GITHUB_USER="$GITHUB_USER"
 export MASTER_GITHUB_PAT="$GITHUB_PAT"
 
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/82/"
