@@ -206,3 +206,7 @@ export MASTER_GITHUB_PAT="$GITHUB_PAT"
 
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/82/"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/84/"
