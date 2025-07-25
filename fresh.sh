@@ -119,3 +119,7 @@ rm -rf ~/Library/Application\ Support/k9s/config.yaml
 rm -rf ~/Library/Application\ Support/k9s/skins
 ln -s $DOTFILES/k9s/config.yaml $HOME/Library/Application\ Support/k9s/config.yaml
 ln -s $DOTFILES/k9s/skins $HOME/Library/Application\ Support/k9s/skins
+
+# gitui
+rm -rf $HOME/.config/gitui
+ln -s $DOTFILES/gitui $HOME/.config/gitui
