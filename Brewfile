@@ -24,6 +24,7 @@ brew 'java'
 brew 'jq' # Used for spatie/visit
 brew 'kubectx' # Switch k8s context and namespace
 brew 'k9s' # Easy k8s
+brew 'jesseduffield/lazygit/lazygit'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
