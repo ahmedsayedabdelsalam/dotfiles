@@ -17,3 +17,6 @@
 [submodule "yazi/flavors"]
 	path = yazi/flavors
 	url = https://github.com/yazi-rs/flavors.git
+[submodule "lazygit/themes/catppuccin"]
+	path = lazygit/themes/catppuccin
+	url = https://github.com/catppuccin/lazygit

@@ -95,6 +95,10 @@ ln -s $DOTFILES/zellij $HOME/.config/zellij
 rm -rf $HOME/.config/nushell
 ln -s $DOTFILES/nushell $HOME/.config/nushell
 
+# LazyGit
+rm -rf $HOME/.config/lazygit
+ln -s $DOTFILES/lazygit $HOME/.config/lazygit
+
 # Git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
