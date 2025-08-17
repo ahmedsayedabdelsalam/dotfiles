@@ -172,6 +172,9 @@ eval "$(jenv init -)"
 
 export EDITOR=nvim
 
+# Support Vi keybindings in Zsh
+set -o vi
+
 # sesh
 function sesh-sessions() {
   {

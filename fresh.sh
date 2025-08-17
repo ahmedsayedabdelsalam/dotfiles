@@ -91,6 +91,10 @@ ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
 rm -rf $HOME/.config/zellij
 ln -s $DOTFILES/zellij $HOME/.config/zellij
 
+# NuShell
+rm -rf $HOME/.config/nushell
+ln -s $DOTFILES/nushell $HOME/.config/nushell
+
 # Git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
