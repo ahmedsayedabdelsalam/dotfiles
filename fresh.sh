@@ -87,6 +87,10 @@ rm -rf $HOME/.tmux.conf
 ln -s $DOTFILES/tmux/.tmux $HOME/.tmux
 ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
 
+# KindaVim
+rm -rf $HOME/Library/Preferences/mo.com.sleeplessmind.kindaVim.plist
+ln -s $DOTFILES/kindavim/mo.com.sleeplessmind.kindaVim.plist $HOME/Library/Preferences/mo.com.sleeplessmind.kindaVim.plist
+
 # Zellij
 rm -rf $HOME/.config/zellij
 ln -s $DOTFILES/zellij $HOME/.config/zellij
