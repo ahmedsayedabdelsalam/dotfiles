@@ -19,6 +19,7 @@ alias cd="z"
 # Bat (better cat)
 alias cat="bat"
 alias timestamp="date +%s"
+alias timestamp="date +%s"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
