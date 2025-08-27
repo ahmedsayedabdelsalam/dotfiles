@@ -18,7 +18,7 @@ return {
       float = {
         transparent = true,
         solid = true,
-    },
+      },
     },
   },
   {
@@ -30,13 +30,13 @@ return {
     },
   },
   {
-  "nvim-lualine/lualine.nvim",
+    "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        component_separators = '',
-        section_separators = { left = '', right = '' },
-      }
-    }
+        component_separators = "",
+        section_separators = { left = "", right = "" },
+      },
+    },
   },
   {
     "LazyVim/LazyVim",
