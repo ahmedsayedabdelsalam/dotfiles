@@ -5,11 +5,13 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'spring-io/tap'
+tap 'FelixKratz/formulae' # jankyborders https://github.com/FelixKratz/JankyBorders
 
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat' # better cat
+brew 'borders' # highlight active window for aerospace
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'eza' # Better ls
 brew 'fd'
@@ -28,6 +30,7 @@ brew 'jesseduffield/lazygit/lazygit'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
+brew 'nikitabobko/tap/aerospace'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
 brew 'sesh' # session manager for tmux

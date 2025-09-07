@@ -5,6 +5,11 @@
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
 
+# Highlight active window using JankyBorders https://github.com/FelixKratz/JankyBorders
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=0'
+]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -179,6 +184,8 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-z = 'move-node-to-workspace Z'
 
     alt-shift-f = 'fullscreen'
+    alt-a = 'exec-and-forget open -a /Applications/Arc.app'
+    alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -214,3 +221,12 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'company.thebrowser.Browser'
     run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.apple.mail'
+    run = 'layout floating'
+[[on-window-detected]] # (default) make me last
+    # no filter = applies to any app not matched above
+    run = 'move-node-to-workspace 1'
