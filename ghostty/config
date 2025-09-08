@@ -1,6 +1,7 @@
 theme = catppuccin-mocha
-background-opacity = 0.85
-background-blur-radius = 20
+background = #000000
+background-opacity = 0.8
+background-blur = true
 
 cursor-style = block
 shell-integration-features = no-cursor
