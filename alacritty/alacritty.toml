@@ -6,7 +6,7 @@ TERM = "xterm-256color"
 # args = ["-l", "welcome"]
 
 [window]
-startup_mode = "SimpleFullscreen"
+# startup_mode = "SimpleFullscreen"
 padding.x = 10
 padding.y = 10
 
@@ -18,16 +18,19 @@ blur = true
 option_as_alt = "Both"
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+normal.family = "JetBrainsMono Nerd Font Mono"
 
 size = 14
+
+[colors]
+primary.background = "#000000"
 
 [general]
 import = [
   # alacritty themes
   # "~/.config/alacritty/themes/themes/coolnight.toml",
   # catppuccin themes
-  # "~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
+  "~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
   # custom theme
-  "~/.config/alacritty/custom/themes/coolnight.toml",
+  # "~/.config/alacritty/custom/themes/coolnight.toml",
 ]

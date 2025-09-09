@@ -31,3 +31,13 @@ if copilot_exists then
     end,
   }):map("<leader>at")
 end
+
+
+-- display git conflicts in snacks picker
+vim.keymap.set("n", "<leader>gc", function()
+  vim.cmd("GitConflictListQf")
+  vim.cmd("cclose")
+  require("snacks.picker").qflist({
+    title = "Git Conflicts",
+  })
+end, { desc = "Git conflicts" })
