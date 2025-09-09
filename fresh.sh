@@ -60,9 +60,8 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 source ./.macos
 
 # Removes karabiner.json from $HOME/.config/karabiner (if it exists) and symlinks the karabiner.json file from the .dotfiles
-rm -rf $HOME/.config/karabiner/karabiner.json
-mkdir -p $HOME/.config/karabiner
-ln -s karabiner.json $HOME/.config/karabiner/karabiner.json
+rm -rf $HOME/.config/karabiner
+ln -s $DOTFILES/karabiner $HOME/.config/karabiner
 
 # Removes .ideavimrc from $HOME/.ideavimrc (if it exists) and symlinks the .ideavimrc file from the .dotfiles
 rm -rf $HOME/.ideavimrc
