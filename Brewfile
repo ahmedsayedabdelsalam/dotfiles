@@ -35,6 +35,7 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'rg'
 brew 'sesh' # session manager for tmux
 brew 'spring-boot'
+brew 'starship' # Shell prompt
 brew 'stern'
 brew 'svn' # Needed to install fonts
 brew 'thefuck'

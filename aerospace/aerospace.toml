@@ -184,8 +184,8 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-z = 'move-node-to-workspace Z'
 
     alt-shift-f = 'fullscreen'
-    alt-a = 'exec-and-forget open -a /Applications/Arc.app'
-    alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
+    alt-b = 'exec-and-forget open -a /Applications/Arc.app'
+    alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'

@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Toggle between "starship" and "ohmyzsh"
+export PROMPT_MODE="starship"
+
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 # Path to you Sites
@@ -25,7 +28,9 @@ export MNML_RPROMPT=('mnml_cwd 20')
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+if [[ "$PROMPT_MODE" == "ohmyzsh" ]]; then
+  ZSH_THEME="robbyrussell"
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -132,7 +137,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 
 # Powerlevel10k
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ "$PROMPT_MODE" == "ohmyzsh" ]]; then
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 # ZSH plugins
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -192,3 +199,8 @@ export MASTER_GITHUB_PAT="$GITHUB_PAT"
 
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/84/"
+
+if [[ "$PROMPT_MODE" == "starship" ]]; then
+  eval "$(starship init zsh)"
+  export STARSHIP_CONFIG=~/.config/starship/starship.toml
+fi

@@ -1,8 +1,11 @@
+# to reload config cmd+shift+,
+
 theme = catppuccin-mocha
 background = #000000
 background-opacity = 0.8
 background-blur = true
 
+macos-titlebar-style = hidden
 cursor-style = block
 shell-integration-features = no-cursor
 cursor-style-blink = false
