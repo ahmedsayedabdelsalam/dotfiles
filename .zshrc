@@ -163,6 +163,11 @@ eval "$(zoxide init zsh)"
 # FZF
 source ~/fzf/fzf.sh
 
+# Carapace (command argument completion)
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
 # ---- TheFuck -----
 # thefuck alias
 eval $(thefuck --alias)
