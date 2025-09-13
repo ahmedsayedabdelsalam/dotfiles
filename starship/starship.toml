@@ -9,6 +9,7 @@ command_timeout = 1000
 [character]
 vicmd_symbol = '[⬅](bold yellow)'
 success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
 
 [directory.substitutions]
 '~/tests/starship-custom' = 'work-project'

@@ -160,6 +160,9 @@ setopt hist_verify
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 
+# Atuin (magical shell history)
+eval "$(atuin init zsh)"
+
 # FZF
 source ~/fzf/fzf.sh
 

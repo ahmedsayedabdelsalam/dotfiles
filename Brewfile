@@ -8,10 +8,12 @@ tap 'spring-io/tap'
 tap 'FelixKratz/formulae' # jankyborders https://github.com/FelixKratz/JankyBorders
 
 # Binaries
+brew 'atuin' # Magical Shell History
 brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat' # better cat
 brew 'borders' # highlight active window for aerospace
+brew 'carapace' # termninal command args completion
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'eza' # Better ls
 brew 'fd'

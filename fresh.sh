@@ -34,6 +34,14 @@ ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 rm -rf $HOME/.p10k.zsh
 ln -sw $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
+# Starship
+rm -rf $HOME/.config/starship
+ln -s $HOME/.dotfiles/starship $HOME/.config/starship
+
+# Atuin (magical shell history)
+rm -rf $HOME/.config/atuin
+ln -s $HOME/.dotfiles/atuin $HOME/.config/atuin
+
 # Update Homebrew recipes
 brew update
 
