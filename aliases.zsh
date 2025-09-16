@@ -9,7 +9,7 @@ alias m1="arch -x86_64"
 alias vim=nvim
 alias vi=nvim
 alias k=kubectl
-alias tm='tmux attach -t 0 || tmux new -s 0'
+alias tm='tmux attach -t default || tmux new -s default'
 
 # Eza (better ls)
 alias ls="eza --icons=always"
