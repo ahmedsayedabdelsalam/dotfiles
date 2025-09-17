@@ -1,0 +1,16 @@
+{
+  "actions" : [
+    {
+      "key" : "t",
+      "type" : "application",
+      "value" : "/Applications/Ghostty.app"
+    },
+    {
+      "iconPath" : "/Applications/Arc.app",
+      "key" : "b",
+      "type" : "application",
+      "value" : "/Applications/Arc.app"
+    }
+  ],
+  "type" : "group"
+}

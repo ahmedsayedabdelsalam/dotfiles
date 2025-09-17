@@ -117,6 +117,10 @@ ln -s $DOTFILES/zellij $HOME/.config/zellij
 rm -rf $HOME/.config/nushell
 ln -s $DOTFILES/nushell $HOME/.config/nushell
 
+# leader-key
+rm -rf $HOME/.config/leaderkey
+ln -s $DOTFILES/leaderkey $HOME/.config/leaderkey
+
 # LazyGit
 rm -rf $HOME/.config/lazygit
 ln -s $DOTFILES/lazygit $HOME/.config/lazygit

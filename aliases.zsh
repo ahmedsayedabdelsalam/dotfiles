@@ -24,6 +24,7 @@ alias timestamp="date +%s"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
+alias config="cd $HOME/.config"
 alias sites="cd $HOME/Sites"
 
 # Laravel
