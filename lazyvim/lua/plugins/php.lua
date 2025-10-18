@@ -18,4 +18,17 @@ return {
       opts.linters_by_ft.php = {}
     end,
   },
+  {
+    "nvim-neotest/neotest",
+    optional = true,
+    dependencies = {
+      "V13Axel/neotest-pest",
+    },
+    opts = {
+      loog_level = vim.log.levels.DEBUG,
+      adapters = {
+        ["neotest-pest"] = {},
+      },
+    },
+  },
 }
