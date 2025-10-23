@@ -148,6 +148,9 @@ ln -s $DOTFILES/yazi $HOME/.config/yazi
 # Aerospace
 rm -rf $HOME/.config/aerospace
 ln -s $DOTFILES/aerospace $HOME/.config/aerospace
+# Aerospace Swipe https://github.com/acsandmann/aerospace-swipe
+rm -rf $HOME/.config/aerospace-swipe
+ln -s $DOTFILES/aerospace-swipe $HOME/.config/aerospace-swipe
 
 # k9s
 rm -rf ~/Library/Application\ Support/k9s/config.yaml
