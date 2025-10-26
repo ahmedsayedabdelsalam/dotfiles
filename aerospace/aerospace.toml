@@ -230,6 +230,12 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'com.apple.iCal'
     run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.apple.LocalAuthentication.UIAgent'
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.apple.PasswordManagerBrowserExtensionHelper'
+    run = 'layout floating'
 [[on-window-detected]] # (default) make me last
     # no filter = applies to any app not matched above
     run = ["layout floating", "move-node-to-workspace 1"]
