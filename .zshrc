@@ -216,3 +216,6 @@ if [[ "$PROMPT_MODE" == "starship" ]]; then
   eval "$(starship init zsh)"
   export STARSHIP_CONFIG=~/.config/starship/starship.toml
 fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform

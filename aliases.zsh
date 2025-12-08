@@ -14,6 +14,7 @@ alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mo
 alias fixmounthdd='sudo pkill -f fsck'
 alias fixturnoffspotlight='sudo mdutil -i off'
 alias fixturnonspotlight='sudo mdutil -i on'
+alias restart-aerospace-swipe="launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist 2>/dev/null && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist"
 
 # Eza (better ls)
 alias ls="eza --icons=always"

@@ -234,10 +234,16 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'com.apple.iCal'
     run = 'layout floating'
 [[on-window-detected]]
+    if.app-id = 'com.apple.Passwords'
+    run = 'layout floating'
+[[on-window-detected]]
     if.app-id = 'com.apple.LocalAuthentication.UIAgent'
     run = 'layout floating'
 [[on-window-detected]]
     if.app-id = 'com.apple.PasswordManagerBrowserExtensionHelper'
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.toggl.daneel'
     run = 'layout floating'
 [[on-window-detected]] # (default) make me last
     # no filter = applies to any app not matched above
