@@ -10,6 +10,10 @@ alias vim=nvim
 alias vi=nvim
 alias k=kubectl
 alias tm='tmux attach -t default || tmux new -s default'
+alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)"'
+alias fixmounthdd='sudo pkill -f fsck'
+alias fixturnoffspotlight='sudo mdutil -i off'
+alias fixturnonspotlight='sudo mdutil -i on'
 
 # Eza (better ls)
 alias ls="eza --icons=always"
