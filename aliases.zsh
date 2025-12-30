@@ -31,6 +31,7 @@ alias timestamp="date +%s"
 alias dotfiles="cd $DOTFILES"
 alias config="cd $HOME/.config"
 alias sites="cd $HOME/Sites"
+alias work="cd $HOME/Sites/workspace"
 
 # Laravel
 alias a="php artisan"

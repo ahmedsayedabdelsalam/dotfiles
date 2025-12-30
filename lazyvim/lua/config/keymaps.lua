@@ -6,8 +6,6 @@ local map = vim.keymap.set
 
 map("i", "jj", "<ESC>")
 
-
-
 -- enable/disable copilot completion
 local Snacks = require("snacks")
 local copilot_exists = pcall(require, "copilot")
@@ -32,7 +30,6 @@ if copilot_exists then
   }):map("<leader>at")
 end
 
-
 -- display git conflicts in snacks picker
 vim.keymap.set("n", "<leader>gc", function()
   vim.cmd("GitConflictListQf")
@@ -41,3 +38,24 @@ vim.keymap.set("n", "<leader>gc", function()
     title = "Git Conflicts",
   })
 end, { desc = "Git conflicts" })
+
+-- Copy relative path with line number (normal mode)
+vim.keymap.set("n", "<leader>fC", function()
+  local path = vim.fn.expand("%") .. ":" .. vim.fn.line(".")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path, vim.log.levels.INFO)
+end, { desc = "Copy file path with line number" })
+
+-- Copy relative path with line range (visual mode)
+vim.keymap.set("v", "<leader>fC", function()
+  local start_line = vim.fn.line("v")
+  local end_line = vim.fn.line(".")
+
+  if start_line > end_line then
+    start_line, end_line = end_line, start_line
+  end
+
+  local path = vim.fn.expand("%") .. ":" .. start_line .. "-" .. end_line
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path, vim.log.levels.INFO)
+end, { desc = "Copy file path with line range" })
