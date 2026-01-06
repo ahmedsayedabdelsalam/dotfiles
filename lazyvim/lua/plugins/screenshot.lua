@@ -1,6 +1,7 @@
 return {
   "mistricky/codesnap.nvim",
-  build = "make",
+  tag = "v2.0.0-beta.17",
+  lazy = false,
   keys = {
     { "<leader>sc", ":CodeSnap<CR>", mode = "v" },
   },
