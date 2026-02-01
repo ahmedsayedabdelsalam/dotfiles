@@ -161,3 +161,7 @@ ln -s $DOTFILES/k9s/skins $HOME/Library/Application\ Support/k9s/skins
 # gitui
 rm -rf $HOME/.config/gitui
 ln -s $DOTFILES/gitui $HOME/.config/gitui
+
+# Opencode
+rm -rf $HOME/.config/opencode
+ln -s $DOTFILES/opencode $HOME/.config/opencode

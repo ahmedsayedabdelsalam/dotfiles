@@ -8,6 +8,7 @@ tap 'spring-io/tap'
 tap 'FelixKratz/formulae' # jankyborders https://github.com/FelixKratz/JankyBorders
 
 # Binaries
+brew 'anomalyco/tap/opencode' // opencode
 brew 'atuin' # Magical Shell History
 brew 'awscli'
 brew 'bash' # Latest Bash version
