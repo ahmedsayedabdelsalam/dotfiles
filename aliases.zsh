@@ -15,6 +15,7 @@ alias fixmounthdd='sudo pkill -f fsck'
 alias fixturnoffspotlight='sudo mdutil -i off'
 alias fixturnonspotlight='sudo mdutil -i on'
 alias restart-aerospace-swipe="launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist 2>/dev/null && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist"
+alias oc=opencode
 
 # Eza (better ls)
 alias ls="eza --icons=always"
