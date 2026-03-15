@@ -159,9 +159,16 @@ ln -s $DOTFILES/k9s/config.yaml $HOME/Library/Application\ Support/k9s/config.ya
 ln -s $DOTFILES/k9s/skins $HOME/Library/Application\ Support/k9s/skins
 
 # gitui
-rm -rf $HOME/.config/gitui
-ln -s $DOTFILES/gitui $HOME/.config/gitui
+# rm -rf $HOME/.config/gitui
+# ln -s $DOTFILES/gitui $HOME/.config/gitui
 
 # Opencode
 rm -rf $HOME/.config/opencode
 ln -s $DOTFILES/opencode $HOME/.config/opencode
+
+# gh Dash
+rm -rf $HOME/.config/gh-dash
+ln -s $DOTFILES/gh-dash $HOME/.config/gh-dash
+
+# Worktrunk
+wt config shell install

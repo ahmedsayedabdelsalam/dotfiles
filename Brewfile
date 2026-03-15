@@ -16,6 +16,7 @@ brew 'bat' # better cat
 brew 'borders' # highlight active window for aerospace
 brew 'carapace' # termninal command args completion
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'dlvhdr/formulae/diffnav' # A git diff pager based on delta but with a file tree
 brew 'eza' # Better ls
 brew 'fd'
 brew 'ffmpeg'
@@ -45,6 +46,7 @@ brew 'thefuck'
 brew 'tlrc' # tldr (better man)
 brew 'tmux'
 brew 'wget'
+brew 'worktrunk'
 brew 'yazi'
 # brew 'zellij' # terminal multiplixer (better tmux)
 brew 'zoxide' # Better cd

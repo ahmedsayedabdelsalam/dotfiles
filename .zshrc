@@ -221,3 +221,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export PATH="/Users/ahmed/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/ahmed/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
