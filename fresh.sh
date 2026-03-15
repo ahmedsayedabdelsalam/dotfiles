@@ -172,3 +172,5 @@ ln -s $DOTFILES/gh-dash $HOME/.config/gh-dash
 
 # Worktrunk
 wt config shell install
+rm -rf $HOME/.config/worktrunk
+ln -s $DOTFILES/worktrunk $HOME/.config/worktrunk
