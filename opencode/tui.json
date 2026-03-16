@@ -3,5 +3,9 @@
   "theme": "theme",
   "scroll_acceleration": {
     "enabled": true
-  }
+  },
+//  "keybinds": {
+//    "leader": "ctrl+o",
+//    "variant_cycle": "<leader>t",
+//  }
 }
