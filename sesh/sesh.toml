@@ -1,0 +1,13 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+[[wildcard]]
+pattern = "~/Sites/**"
+startup_command = "nvim"
+# windows = [ "edit", "git" ]
+
+[[window]]
+name = "edit"
+startup_script = "nvim"
+
+[[window]]
+name = "git"
+startup_script = "git pull"

@@ -42,6 +42,7 @@ brew 'spring-boot'
 brew 'starship' # Shell prompt
 brew 'stern'
 brew 'svn' # Needed to install fonts
+brew 'television' # Better fuzzy finder
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
 brew 'tmux'

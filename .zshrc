@@ -183,6 +183,13 @@ eval $(thefuck --alias fk)
 # Yazi
 source ~/.config/yazi/yazi.zsh
 
+# Television
+eval "$(tv init zsh)"
+
+# Sesh
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+
 # Jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"

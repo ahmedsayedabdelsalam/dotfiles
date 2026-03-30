@@ -26,6 +26,8 @@ fi
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+rm -rf $HOME/.zsh
+ln -s $DOTFILES/.zsh $HOME/.zsh
 
 # Removes .p10k.zsh from $HOME (if it exists) and symlinks the .p10k.zsh file from the .dotfiles
 rm -rf $HOME/.p10k.zsh
@@ -174,3 +176,11 @@ ln -s $DOTFILES/gh-dash $HOME/.config/gh-dash
 wt config shell install
 rm -rf $HOME/.config/worktrunk
 ln -s $DOTFILES/worktrunk $HOME/.config/worktrunk
+
+# Television
+rm -rf $HOME/.config/television
+ln -s $DOTFILES/television $HOME/.config/television
+
+# Sesh
+rm -rf $HOME/.config/sesh
+ln -s $DOTFILES/sesh $HOME/.config/sesh
