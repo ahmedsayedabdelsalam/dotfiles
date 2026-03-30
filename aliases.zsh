@@ -16,6 +16,8 @@ alias fixturnoffspotlight='sudo mdutil -i off'
 alias fixturnonspotlight='sudo mdutil -i on'
 alias restart-aerospace-swipe="launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist 2>/dev/null && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.acsandmann.swipe.plist"
 alias oc=opencode
+alias lg=lazygit
+alias ghd="gh dash"
 
 # Eza (better ls)
 alias ls="eza --icons=always"
