@@ -30,7 +30,6 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
-brew 'codex'
 brew 'imagemagick'
 brew 'yarn'
 
