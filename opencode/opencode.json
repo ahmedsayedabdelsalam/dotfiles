@@ -4,7 +4,8 @@
   "permission": {
     "bash": {
       "git push *": "ask",
-      "git merge *": "ask"
+      "git merge *": "ask",
+      "git reset *": "ask"
     }
   }
 }
