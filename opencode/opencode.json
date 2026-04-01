@@ -3,7 +3,8 @@
   "formatter": false,
   "permission": {
     "bash": {
-      "git push *": "ask"
+      "git push *": "ask",
+      "git merge *": "ask"
     }
   }
 }
