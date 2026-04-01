@@ -41,10 +41,9 @@ config.window_padding = {
 config.color_scheme = 'Catppuccin Mocha'
 if transparent then
   config.background = {
-    b.get_background(true, 0.7),
+    b.get_background(true, 0.5),
     b.get_animation(assets .. "/blob_blue.gif"),
   }
-config.window_background_opacity = 0.8
 config.macos_window_background_blur = 30
 end
 

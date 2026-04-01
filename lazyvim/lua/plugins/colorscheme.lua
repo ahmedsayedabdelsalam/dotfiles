@@ -17,8 +17,17 @@ return {
       transparent_background = true,
       float = {
         transparent = true,
-        solid = true,
+        solid = false,
       },
+        custom_highlights = function(colors)
+          return {
+            LineNr = { fg = "#7f6f6f" },
+            CursorLine = { bg = "#3d2a2a" },
+            CursorLineNr = { fg = "#e8b8b8", bg = "#3d2a2a" },
+            Visual = { bg = "#6b4545" },
+            VisualNOS = { bg = "#6b4545" },
+          }
+        end,
     },
   },
   {
