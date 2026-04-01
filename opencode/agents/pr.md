@@ -20,6 +20,15 @@ Workflow:
 4. Stage only relevant files, not all changes
 5. Create and switch to new branch: `git checkout -b <branch-name>`
 6. Commit with auto-generated or user-provided message
+   - Use gitmoji prefixes based on change type:
+     - ✨ new feature → `feat:`
+     - 🐛 bug fix → `fix:`
+     - 📝 docs → `docs:`
+     - 🎨 refactor/style → `refactor:`
+     - ♻️ perf → `perf:`
+     - ✅ tests → `test:`
+     - 🔧 config → `chore:`
+   - Format: `<emoji> <type>: <description>` (e.g., "✨ feat: add dark mode")
 7. Push to remote: `git push -u origin <branch-name>`
 8. Create PR using `gh pr create` with short title + bullet points (dev-friendly, no verbose docs)
 
