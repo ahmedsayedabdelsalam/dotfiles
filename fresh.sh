@@ -184,3 +184,6 @@ ln -s $DOTFILES/television $HOME/.config/television
 # Sesh
 rm -rf $HOME/.config/sesh
 ln -s $DOTFILES/sesh $HOME/.config/sesh
+
+# gh-dash
+gh extension install dlvhdr/gh-dash
