@@ -1,3 +1,4 @@
+-- https://github.com/nicknisi/dotfiles/blob/main/config/wezterm/wezterm.lua
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local mux = wezterm.mux
@@ -9,6 +10,20 @@ local assets = wezterm.config_dir .. "/assets"
 local transparent = true
 
 -- This is where you actually apply your config choices
+
+config.max_fps = 120
+config.colors = {
+  cursor_bg = "#f5c06f",
+  cursor_border = "#f5c06f",
+  indexed = { [239] = "lightslategray" },
+}
+config.native_macos_fullscreen_mode = true
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
 
 -- For example, changing the color scheme:
 -- config.colors = {
@@ -34,7 +49,7 @@ config.macos_window_background_blur = 30
 end
 
 
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font = wezterm.font("Fira Code")
 config.font_size = 14
 
 config.hide_tab_bar_if_only_one_tab = true
