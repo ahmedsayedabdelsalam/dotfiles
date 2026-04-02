@@ -1,13 +1,16 @@
 #:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+
+dir_length = 2
+
 [[wildcard]]
 pattern = "~/Sites/**"
 startup_command = "nvim"
-# windows = [ "edit", "git" ]
+windows = [ "dev", "ai" ]
 
 [[window]]
-name = "edit"
-startup_script = "nvim"
+name = "dev"
+startup_script = "tmux split-window -h -t 2"
 
 [[window]]
-name = "git"
-startup_script = "git pull"
+name = "ai"
+startup_script = "opencode"
