@@ -20,8 +20,8 @@ Workflow:
 4. Stage only relevant files, not all changes
 5. Create and switch to new branch: `git checkout -b <branch-name>`
 6. Commit with auto-generated or user-provided message
-   - Even if user provides a message, you MUST apply the gitmoji + type format below
-   - Use gitmoji prefixes based on change type:
+   - UNLESS I explicitly tell you to use my exact message, you MUST apply the gitmoji + type format below
+   - Use THESE EXACT gitmoji prefixes (not alternatives):
      - ✨ new feature → `feat:`
      - 🐛 bug fix → `fix:`
      - 📝 docs → `docs:`
