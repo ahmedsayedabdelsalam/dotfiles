@@ -59,3 +59,7 @@ vim.keymap.set("v", "<leader>fC", function()
   vim.fn.setreg("+", path)
   vim.notify("Copied: " .. path, vim.log.levels.INFO)
 end, { desc = "Copy file path with line range" })
+
+vim.keymap.set("n", "<leader>u.", function ()
+  require("snacks").dashboard()
+end, { desc = "Show dashboard" })
