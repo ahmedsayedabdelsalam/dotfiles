@@ -203,21 +203,11 @@ set -o vi
 # LazyGit
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/themes/catppuccin/themes-mergable/mocha/peach.yml"
 
-# Herd injected PHP binary.
-export PATH="/Users/ahmed/Library/Application Support/Herd/bin/":$PATH
-
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/83/"
-
 export GITHUB_USER=ahmedsayedabdelsalam
 export GITHUB_PAT=$(security find-generic-password -s "github_pat" -w)
 export MASTER_GITHUB_USER="$GITHUB_USER"
 export MASTER_GITHUB_PAT="$GITHUB_PAT"
 
-
-# Herd injected PHP 8.4 configuration.
-export HERD_PHP_84_INI_SCAN_DIR="/Users/ahmed/Library/Application Support/Herd/config/php/84/"
 
 if [[ "$PROMPT_MODE" == "starship" ]]; then
   eval "$(starship init zsh)"
@@ -226,7 +216,5 @@ fi
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-export PATH="/Users/ahmed/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/Users/ahmed/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi

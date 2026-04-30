@@ -24,11 +24,15 @@ Workflow:
    - Use THESE EXACT formats:
      - ✨ feat: add new feature (e.g., "✨ feat: add dark mode")
      - 🐛 fix: resolve bug (e.g., "🐛 fix: login error")
+     - 🔒 fix: security/auth/permission fixes (e.g., "🔒 fix: add ownership verification")
      - 📝 docs: documentation
      - 🎨 refactor: style improvement
      - ♻️ refactor: code improvement
      - ✅ test: add tests
      - 🔧 chore: config changes
+   - Choose between `feat` vs `fix`:
+     - Use `fix:` for security patches, bug corrections, adding missing validations/checks
+     - Use `feat:` for new user-facing features or capabilities
 7. Push to remote: `git push -u origin <branch-name>`
 8. Create PR using `gh pr create` with short title + bullet points (dev-friendly, no verbose docs)
 
