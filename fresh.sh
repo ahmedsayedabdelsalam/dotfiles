@@ -10,11 +10,6 @@ else
   echo "Xcode Command Line Tools already installed."
 fi
 
-# Check for Oh My Zsh and install if we don't have it
-if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
-fi
-
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -28,10 +23,6 @@ rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 rm -rf $HOME/.zsh
 ln -s $DOTFILES/.zsh $HOME/.zsh
-
-# Removes .p10k.zsh from $HOME (if it exists) and symlinks the .p10k.zsh file from the .dotfiles
-rm -rf $HOME/.p10k.zsh
-ln -sw $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
 # Starship
 rm -rf $HOME/.config/starship
