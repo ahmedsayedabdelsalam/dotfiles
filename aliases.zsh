@@ -13,6 +13,8 @@ alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mo
 alias oc=opencode
 alias lg=lazygit
 alias ghd="gh dash"
+alias claude='claude --settings ~/.dotfiles/claude/settings.json'
+alias claude-zan='CLAUDE_CONFIG_DIR=~/.claude-zan claude --settings ~/.dotfiles/claude/settings.json'
 
 # Fixes
 alias fixmounthdd='sudo pkill -f fsck'
