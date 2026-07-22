@@ -71,9 +71,6 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-# Zoxide (better cd)
-eval "$(zoxide init zsh)"
-
 # Atuin (magical shell history)
 eval "$(atuin init zsh)"
 
@@ -116,11 +113,15 @@ export GITHUB_USER=ahmedsayedabdelsalam
 export GITHUB_PAT=$(security find-generic-password -s "github_pat" -w)
 export MASTER_GITHUB_USER="$GITHUB_USER"
 export MASTER_GITHUB_PAT="$GITHUB_PAT"
+export NODE_AUTH_TOKEN=$(security find-generic-password -s "github_packages_pat" -w)
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml

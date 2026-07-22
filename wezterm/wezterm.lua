@@ -66,5 +66,15 @@ end)
 -- start with zellij
 -- config.default_prog = { "zellij", "-l", "welcome" }
 
+-- Send CSI u sequence for Shift+Enter so tmux extended-keys passes it through
+-- (by default WezTerm sends plain \r, indistinguishable from Enter)
+config.keys = {
+  {
+    key = "Enter",
+    mods = "SHIFT",
+    action = wezterm.action.SendString("\x1b[13;2u"),
+  },
+}
+
 -- and finally, return the configuration to wezterm
 return config
