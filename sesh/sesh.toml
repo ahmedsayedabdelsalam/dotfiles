@@ -13,4 +13,4 @@ startup_script = "tmux split-window -h -t 2"
 
 [[window]]
 name = "ai"
-startup_script = "opencode"
+startup_script = "claude"
