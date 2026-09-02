@@ -1,4 +1,11 @@
 {
+  "model": "sonnet",
+  "theme": "auto",
+  "tui": "fullscreen",
+  "effortLevel": "medium",
+  "enabledPlugins": {
+    "php-lsp@claude-plugins-official": true
+  },
   "attribution": {
     "commit": "",
     "pr": ""

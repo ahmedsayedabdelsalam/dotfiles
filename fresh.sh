@@ -160,6 +160,11 @@ ln -s $DOTFILES/opencode $HOME/.config/opencode
 rm -rf $HOME/.config/gh-dash
 ln -s $DOTFILES/gh-dash $HOME/.config/gh-dash
 
+# Claude Code (symlink only settings.json; the rest of ~/.claude is machine-local state)
+mkdir -p $HOME/.claude
+rm -f $HOME/.claude/settings.json
+ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
+
 # Worktrunk
 wt config shell install
 rm -rf $HOME/.config/worktrunk
