@@ -125,3 +125,4 @@ eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export XDG_CONFIG_HOME="$HOME/.config"

@@ -180,3 +180,7 @@ ln -s $DOTFILES/sesh $HOME/.config/sesh
 
 # gh-dash
 gh extension install dlvhdr/gh-dash
+
+# TUIOS
+rm -rf $HOME/.config/tuios
+ln -s $DOTFILES/tuios $HOME/.config/tuios

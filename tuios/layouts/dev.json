@@ -1,0 +1,28 @@
+{
+  "name": "dev",
+  "created_at": "2026-10-24T04:52:39.359833+03:00",
+  "version": 2,
+  "auto_tiling": true,
+  "tiling_scheme": "spiral",
+  "master_ratio": 0.5,
+  "windows": [
+    {
+      "x": 0,
+      "y": 0,
+      "width": 167,
+      "height": 54,
+      "title": "Terminal 8514a95d",
+      "working_dir": "/Users/ahmed/Sites/workspace/alramz/backend"
+    },
+    {
+      "x": 167,
+      "y": 0,
+      "width": 167,
+      "height": 54,
+      "title": "✳ Claude Code",
+      "working_dir": "/Users/ahmed/Sites/workspace/alramz/backend"
+    }
+  ],
+  "screen_width": 175,
+  "screen_height": 54
+}
