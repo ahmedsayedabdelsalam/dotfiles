@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Usage: toggl start "<description>" [project_id] | stop | current | projects
+# Usage: toggl start "<description>" [project_id] | stop | current | projects | total <JIRA-ID>
 set -euo pipefail
 
 : "${TOGGL_API_TOKEN:?TOGGL_API_TOKEN is not set}"
@@ -31,7 +31,17 @@ case "${1:-}" in
   projects)
     call "$API/me/projects" | jq -r '.[] | "\(.id)\t\(.name)"'
     ;;
+  total)
+    key="${2:?Jira id required}"
+    from=$(date -u -v-80d +%Y-%m-%d 2>/dev/null || date -u -d '80 days ago' +%Y-%m-%d)
+    to=$(date -u -v+1d +%Y-%m-%d 2>/dev/null || date -u -d 'tomorrow' +%Y-%m-%d)
+    call "$API/me/time_entries?start_date=$from&end_date=$to" | jq --arg k "$key" --argjson now "$(date +%s)" '
+      [.[] | select((.description // "") | startswith($k + " "))
+           | {day: (.start[0:10]), seconds: (if .duration < 0 then $now + .duration else .duration end)}]
+      | {entries: length, per_day: (group_by(.day) | map({day: .[0].day, hours: ((map(.seconds)|add)/3600*100|round/100)})),
+         total_seconds: (map(.seconds)|add // 0), total_hours: ((map(.seconds)|add // 0)/3600*100|round/100)}'
+    ;;
   *)
-    echo "usage: toggl start \"<description>\" [project_id] | stop | current | projects" >&2; exit 1
+    echo "usage: toggl start \"<description>\" [project_id] | stop | current | projects | total <JIRA-ID>" >&2; exit 1
     ;;
 esac
