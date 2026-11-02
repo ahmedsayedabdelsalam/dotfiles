@@ -160,10 +160,13 @@ ln -s $DOTFILES/opencode $HOME/.config/opencode
 rm -rf $HOME/.config/gh-dash
 ln -s $DOTFILES/gh-dash $HOME/.config/gh-dash
 
-# Claude Code (symlink only settings.json; the rest of ~/.claude is machine-local state)
-mkdir -p $HOME/.claude
-rm -f $HOME/.claude/settings.json
-ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
+# Claude Code (whole dir is linked; claude/.gitignore allowlists what is tracked)
+if [ -d $HOME/.claude ] && [ ! -L $HOME/.claude ]; then
+  mv $HOME/.claude $HOME/.claude.bak
+fi
+ln -sfn $DOTFILES/claude $HOME/.claude
+# settings.json stays local (untracked); seed it from the sanitized copy
+[ -f $HOME/.claude/settings.json ] || cp $DOTFILES/claude/settings.public.json $HOME/.claude/settings.json
 
 # Worktrunk
 wt config shell install

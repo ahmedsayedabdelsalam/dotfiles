@@ -1,0 +1,6 @@
+*
+!.gitignore
+!CLAUDE.md
+!settings.public.json
+!bin/
+!bin/**

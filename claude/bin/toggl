@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Usage: toggl start "<description>" [project_id] | stop | current | projects
+set -euo pipefail
+
+: "${TOGGL_API_TOKEN:?TOGGL_API_TOKEN is not set}"
+API="https://api.track.toggl.com/api/v9"
+AUTH="$TOGGL_API_TOKEN:api_token"
+
+call() { curl -sS --fail-with-body -u "$AUTH" -H 'Content-Type: application/json' "$@"; }
+
+wid() { call "$API/me" | jq -r '.default_workspace_id'; }
+
+case "${1:-}" in
+  start)
+    desc="${2:?description required}"
+    pid="${3:-}"
+    w=$(wid)
+    body=$(jq -n --arg d "$desc" --argjson w "$w" --arg p "$pid" --arg s "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+      '{description:$d, workspace_id:$w, start:$s, duration:-1, created_with:"claude-code"} + (if $p != "" then {project_id:($p|tonumber)} else {} end)')
+    call -X POST "$API/workspaces/$w/time_entries" -d "$body" | jq '{id, description, project_id, start}'
+    ;;
+  stop)
+    cur=$(call "$API/me/time_entries/current")
+    if [ "$cur" = "null" ]; then echo "no running entry"; exit 0; fi
+    id=$(jq -r '.id' <<<"$cur"); w=$(jq -r '.workspace_id' <<<"$cur")
+    call -X PATCH "$API/workspaces/$w/time_entries/$id/stop" | jq '{id, description, duration}'
+    ;;
+  current)
+    call "$API/me/time_entries/current" | jq '.'
+    ;;
+  projects)
+    call "$API/me/projects" | jq -r '.[] | "\(.id)\t\(.name)"'
+    ;;
+  *)
+    echo "usage: toggl start \"<description>\" [project_id] | stop | current | projects" >&2; exit 1
+    ;;
+esac
