@@ -46,6 +46,7 @@ brew 'television' # Better fuzzy finder
 brew 'thefuck'
 brew 'tlrc' # tldr (better man)
 brew 'tmux'
+brew 'tuios' # Terminal UI OS (terminal multiplexer)
 brew 'wget'
 brew 'worktrunk'
 brew 'yazi'
@@ -71,6 +72,7 @@ brew 'gitmoji'
 brew 'python-setuptools'
 
 # Apps
+cask '1password'
 cask 'alacritty'
 cask 'android-studio'
 cask 'arc'
